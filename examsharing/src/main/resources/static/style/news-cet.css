@@ -134,15 +134,16 @@ article{
 
 #cet-article-box{
 	width: 100%;
-	height: 2140px;
+	height: 2400px;
+	overflow: hidden;
 	position: relative;
 }
-.cet-article-box1,.cet-article-box2,.cet-article-box3,.cet-article-box4 {
-	width: 100%;
-	height: 100%;
-	/*position: absolute;*/
-	display: none;	
-}
+/*.cet-article-box1,.cet-article-box2,.cet-article-box3,.cet-article-box4 {*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*!*position: absolute;*!*/
+	/*display: none;	*/
+/*}*/
 #cet-article-box1 {
 	z-index: 2;
 }
@@ -338,35 +339,28 @@ p {
 /*-----------------咨讯BOX---------------*/
 
 
-/*----------------------跳转按钮---------------------*/
-.news {
+/*----------------------加载更多按钮---------------------*/
+.news-button {
 	height: 50px;
 	width: 100%;
 	position: relative;
 	margin-top: 30px;
 }
-.news-button { 
-	height: 40px;
+#replace-more-button {
 	width: 150px;
-	position: absolute;
-	top: 10px;
-	left: 45%;
-	
-}
-.news-button span {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
+	height: 40px;
+	border-radius: 40px;
 	border: 1px solid #fff;
 	background-color: #8a8a8a;
 	display: inline-block;
 	text-align: center;
-	line-height: 30px;
+	line-height: 40px;
 	color: #fff;
 	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
 }
-
-
 /*------------------------------侧边栏---------------------------*/
 aside {
 	height: 2200px;
@@ -494,4 +488,10 @@ aside {
 #footer { 
 height: 60px; 
 clear:both; 
-} 
+}
+
+footer{
+	position: relative;
+	top: 0;
+	left:0;
+}

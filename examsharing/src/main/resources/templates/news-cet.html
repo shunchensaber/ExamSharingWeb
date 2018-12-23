@@ -101,8 +101,11 @@
                         </ul>
 
                     </div>
-
-            </article>
+                </div>
+                <div class="news-button" >
+                    <span id="replace-more-button">加载更多</span>
+                </div>
+                </article>
         </section>
         <!-- 侧边栏 -->
         <aside>
@@ -183,5 +186,14 @@
         </div>
     </footer>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#replace-more-button").click(function() {
+            $("#cet-article-box").css(
+                "height", function(index, value) {return parseFloat(value) * 1.5;}
+            );
+        });
+    });
+</script>
 </body>
 </html>

@@ -111,8 +111,17 @@ nav ul li ul li a {
 .navbar-button li:nth-child(2){
 	margin-right: 0;
 }
-
-/*---------------鼠标经过时更改样式----------------*/
+.navbar-button li p{
+	font-size: 20px;
+	color: #ff9a00;
+}
+.navbar-button li img {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius:  50%;
+}
+	/*---------------鼠标经过时更改样式----------------*/
 .navbar-button li:hover {
 	/*background-color: rgb(2,255,242);*/
 	background-color: #ff9a00;  /*logo图标的主颜色*/

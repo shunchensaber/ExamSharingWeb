@@ -31,6 +31,7 @@ public class UserController {
         if (session.getAttribute("login_tag") != null) {
             model.put("login_tag", false);
             model.put("username", session.getAttribute("username"));
+            model.put("msg", "用户名错误，密码也错误！");
             session.removeAttribute("login_tag");
             session.removeAttribute("username");
         }
