@@ -23,8 +23,13 @@ public class UserController {
 
 
     @RequestMapping("/login")
-    public String login(Map<String, Object> model){
-
+    public String login(Map<String, Object> model, HttpSession session){
+        if (session.getAttribute("login_tag") != null) {
+            model.put("login_tag", false);
+            model.put("username", session.getAttribute("username"));
+            session.removeAttribute("login_tag");
+            session.removeAttribute("username");
+        }
         return "login";
     }
 
@@ -32,10 +37,14 @@ public class UserController {
     public String loginCheck(@RequestParam("username") String username,
                                    @RequestParam("password") String password,
                              HttpSession session){
-
         session.setAttribute("username", username);
-        session.setAttribute("password", password);
-        return "redirect:/";
+        if (username.equals("123456") && password.equals("123456")) {
+            return "redirect:/";
+        } else {
+            session.setAttribute("login_tag", false);
+            return "redirect:/login";
+        }
+
     }
 
 
