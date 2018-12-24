@@ -1,5 +1,6 @@
 body {
-	min-width: 1284px;
+	/*width: 1284px;*/
+	width: 100%;
 	background-color: rgba(204,204,204,.2);
 }
 #page-nav {
@@ -18,13 +19,19 @@ body {
 }
 #page-nav {
 	background-color: rgba(251,248,243);
+
 }
 #home-banner {
-	width: 1284px;
-	height: 664px; /*原来为600px*/
-	background: url(../image/index/navbar.jpg) no-repeat ;
+	/*width: 1284px;*/
+	width: 100%;
+	min-width: 1284px;
+	min-height: 664px; /*原来为600px*/
+	/*下面三行代码：背景图片随网页自适应调整大小*/
+	background: url(../image/index/navbar.jpg) no-repeat 0px 0px;
+	background-size: cover;
+	/*background-attachment: fixed;*/
 	position: relative;
-	z-index: -1;  
+	z-index: -1;
 	/*div (page-nav)的position为relative，符合标准流，
 	这里为absolute，脱离标准流，不占位置，它将覆盖上一层DIV
 	将其置于底层*/
@@ -46,18 +53,21 @@ body {
 	padding: 0;
 }
 #home-aside{
-	width: 500px;
+	/*width: 500px;*/
+	width: 38.9%;
 	height: 400px;
 	/*background-color: rgba(255,255,255,0.4);*/
 	z-index: 1;
 	position: absolute;
 	top: 150px;  /*原来为90px*/
-	right: 110px;
+	/*right: 110px;*/
+	right: 80px;
 	border-radius: 15%;
 }
 #container {
-	width: 500px;
-	height: 400px;
+	/*width: 500px;*/
+	width: 100%;
+	min-height: 400px;
 	overflow: hidden;
 	border-radius: 15%;
 	position: absolute;  /*这里的定位为绝对定位absolute或者相对定位relative都可以，就是必须要设置*/
@@ -91,7 +101,7 @@ body {
 	border-radius: 50%;
 	/*background-color: rgba(255,154,0,.5);*/
 	background-color: #ccc;
-	
+
 }
 #button > .on {
 	width: 18px;
@@ -135,7 +145,7 @@ body {
 	width: 50px;
 	position: absolute;
 	bottom: 20px;
-	left: 642px;
+	left: 50%;
 }
 
 
@@ -149,10 +159,11 @@ body {
 	position: relative;
 	/*background-color: rgba(204,204,204,.2);*/
 }
-.kx-word { 
+.kx-word {
 	height: 100px;
 	position: absolute;
-	left: 50px;
+	/*left: 50px;*/
+	left: 3.89%;
 	top: 50px;
 }
 .kx-word span {
@@ -162,19 +173,24 @@ body {
 }
 
 #main-course {
-	width: 100%;
+	/*width: 100%;*/
+	min-width: 1184px;
+	width: 92.21%;
 	height: 518px;
+	margin-left: 3.89%;
+	margin-right: 3.89%;
 	position: relative;
 	top: 100px;
-/*	background-color: rgba(255,255,255,.4);*/
+	/*	background-color: rgba(255,255,255,.4);*/
 	/*padding-top: 20px; *//* 与精品课程这几个字的间距*/
 
 
 }
 .m-course {
 	float: left;
-	height: 350px;
-	width: 280px;
+	min-height: 350px;
+	min-width: 260px;
+	width: 23%;
 	background-color: #fff;
 	display: inline-block;
 	overflow: hidden;
@@ -184,13 +200,22 @@ body {
 	padding: 20px;
 	background: #fff;
 	vertical-align: top;
-	margin: 30px 20px 20px 0;  
-
+	/*	margin: 30px 20px 20px 0;*/  /*上右下左*/
+	margin: 30px 0 20px 0;
 }
-.m-course:nth-child(1){
+/*.m-course:nth-child(1){
 	margin-left: 50px;
 }
-
+*/
+.m-course:nth-child(1){
+	margin-right: 2.3%;
+}
+.m-course:nth-child(2){
+	margin-right:  2.3%;
+}
+.m-course:nth-child(3){
+	margin-right:  2.3%;
+}
 /*----单个教程模块开始-----*/
 
 .classify{
@@ -262,18 +287,26 @@ body {
 
 /*--------------最新咨讯开始----------*/
 .kx-News {
-	width: 100%;
-	height: 450px;
+	/*width: 100%;*/
+	min-width: 1184px;
+	width: 92.21%;
+	margin-left: 3.89%;
+	margin-right: 3.89%;
+	height: 420px;
 	position: relative;
 	z-index: 1;
 }
+.kx-word-left{
+	left: 0px;
+}
 .new{
-	/*height: 50%;
-	width: 29.6%;*/
-	height: 225px;
-	width: 380px;
+	height: 51%;
+	width: 31.3%;
+	/*min-height: 225px;
+	min-width: 380px;*/
 	float: left;
-	margin: 132px 10px;
+	/*margin: 132px 10px;*/
+	margin: 132px 20px 66px 10px;  /*上 右  下  左*/
 	border-radius: 4px;
 	background-color: rgba(255,255,255,.5);
 	z-index: 2;
@@ -282,14 +315,16 @@ body {
 }
 
 .news1 {
-	margin-left: 50px;
+	/*margin-left: 50px;*/
+	margin-left: 0px;
 	background: url(../image/index/new1.png);
 }
 .news2 {
 	background: url(../image/index/new2.png);
 }
 .news3 {
-	margin-right: 50px;
+	/*margin-right: 50px;*/
+	margin-right: 0px;
 	background: url(../image/index/new3.png);
 }
 .new-img {
@@ -334,11 +369,15 @@ body {
 /*-------------图标开始-----------*/
 .kx-ad {
 	height: 870px;
+	margin: 0px;
+	padding: 0px;
+	/*	top: 40px;*/
 }
 .ad-word {
 	margin-top: 40px;
 	height: 150px;
 	width: 100%;
+	min-width: 1284px;
 }
 .ad-word h1 {
 	font-size: 50px;
@@ -354,6 +393,7 @@ body {
 .ad-main1,.ad-main2 {
 	height: 50%;
 	width: 100%;
+	/*min-width: 1284px;*/
 }
 .ad-main1 {
 	border-bottom: 1px solid   rgba(204,204,204,.5);
@@ -361,6 +401,8 @@ body {
 .box1,.box2,.box3{
 	width: 33%;
 	height: 100%;
+	/*min-width: 300px;*/
+	/*max-width: 390px;*/
 	float: left;
 	text-align: center;
 	position: relative;
@@ -377,18 +419,24 @@ body {
 }*/
 .ad-main1 div img,.ad-main2 div img{
 	margin-top: 100px;
+
 }
+.ad-main1 div,.ad-main2 div{
+	min-width: 28%;
+	height: 310px;
+}
+
 .skuShow {
 	background: #fff;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transition: width .3s, height .3s,opacity .3s;
-    top: 0;
-    z-index: 5;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transition: width .3s, height .3s,opacity .3s;
+	top: 0;
+	z-index: 5;
 }
 #skuShow1,#skuShow2,#skuShow3 {
-	  opacity: 0;
+	opacity: 0;
 }
 .skuShow p {
 	font-size: 40px;

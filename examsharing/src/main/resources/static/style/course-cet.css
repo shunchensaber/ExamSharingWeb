@@ -17,13 +17,14 @@ body {
 	z-index: -1;
 }
 .cet1-box {
-	width: 1184px;
+	/*min-width: 1184px;*/
+	width: 92.21%;
 	height: 70%;
 	position: absolute;
 	margin: 80px 50px;
 }
 .cet hr{
-	width: 27%;
+	width: 30%;
 	height: 70%；
 
 }
@@ -36,7 +37,7 @@ body {
 .hr-right {
 	position: absolute;
 	top: 50%;
-	right: 65px; 
+	right: 65px;
 	border: 1px solid  rgba(204,204,204,.5);
 }
 .cet-word {
@@ -51,9 +52,13 @@ body {
 
 /*课程展示*/
 .window{
-	height: 1200px;
-	width: 100%; 
+	/*height: 1200px;*/
+	height: 1300px;
+	/*width: 100%; */
+	width: 92.21%;
 	position: relative;
+	margin-left: 7.7%;
+	margin-right: 7.7%;
 }
 .window1,.window2,.window3,.window4{
 	width: 100%;
@@ -78,11 +83,11 @@ body {
 }
 
 
-.cet2 {
+/*.cet2 {
 	margin: 2px 50px;
 	position: relative;
 }
-
+*/
 .cet2-1, .cet2-2,.cet2-3{
 	width: 100%;
 	height: 400px;
@@ -96,7 +101,8 @@ body {
 .m-course {
 	float: left;
 	height: 350px;
-	width: 320px;
+	/*width: 320px;*/
+	width: 27%;
 	background-color: #fff;
 	display: inline-block;
 	overflow: hidden;
@@ -106,14 +112,20 @@ body {
 	padding: 20px;
 	background: #fff;
 	vertical-align: top;
-	margin: 30px 50px 20px 0;  /* 上 右  下 左*/
+	/*margin: 30px 50px 20px 0; */ /* 上 右  下 左*/
+	margin: 30px 10px 20px 10px;
 
 }
 
-.m-course:nth-child(1){
+/*.m-course:nth-child(1){
 	margin-left: 60px;
+}*/
+.m-course:nth-child(1){
+	margin-right: 5.0%;
 }
-
+.m-course:nth-child(2){
+	margin-right: 5.0%;
+}
 /*.m-course:nth-child(4){
 	margin-right: 0;
 }
@@ -181,7 +193,7 @@ body {
 	/*box-shadow: h-shadow v-shadow blur spread color inset;*/
 	box-shadow: 0 5px 8px 5px rgba(0,0,0,0.2);
 }
- 
+
 
 /*----------------------跳转按钮---------------------*/
 .cet3 {
@@ -194,7 +206,7 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 45%;
-	
+
 }
 .cet3-button span {
 	width: 30px;

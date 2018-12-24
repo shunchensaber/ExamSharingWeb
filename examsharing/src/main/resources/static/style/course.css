@@ -1,18 +1,23 @@
+body {
+	width: 100%;
+	height: 100%;
+}
 section {
 	height: 610px;
+	/*height: 80%;*/
 	width: 100%;
 	background-color: #fff;
 	margin-top: 90px;
- 
+
 }
 /*-------------------课程表--------------------*/
 .class-schedule{
 	width: 28%;
 	min-height: 80%;
-/*	height: 90%;*/
-/*	border: 1px solid #8a8a8a;*/
-    border: 1px solid #f3f3f3;
-    box-shadow: #f3f3f3  1px 1px 1px 1px;
+	/*	height: 90%;*/
+	/*	border: 1px solid #8a8a8a;*/
+	border: 1px solid #f3f3f3;
+	box-shadow: #f3f3f3  1px 1px 1px 1px;
 	margin-left: 50px;
 	background-color: #fff;
 	float: left;
@@ -74,14 +79,35 @@ section {
 /*视频播放器*/
 .course-video {
 	background-color: #fff;
-	/*width: 65%;
-	height: 90%;*/
-	width: 770px;
+	width: 60%;
+	/*height: 90%;*/
+	/*width: 770px;*/
 	height: 490px;
+
 	/*border: 1px solid #8a8a8a;*/
 	margin-right: 50px;
 	float: right;
-	margin-top: 30px;
+	margin-top: 20px;
+}
+video {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.vjs-poster{
+	background: url("../image/course/image1.png") 0px 0px;
+	background-size: cover;
 }
 
-/*-------------------课程表--------------------
+/*-------------------课程表--------------------*/
+.push{
+	height: 60px;
+	width: 100%;
+	position: relative;
+}
+footer{
+	position: relative;
+	bottom: 0;
+	left: 0;
+}

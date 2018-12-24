@@ -15,14 +15,14 @@ html,body {
 	min-height: 100%;
 }
 /*--------------header部分-------------*/
-#home-banner { 
+#home-banner {
 	width: 100%;
 	height: 360px;
 	margin-top: 114px;
 	/*background-color: red;*/
 	position: relative;
 	z-index: 0;/*特别注意不能设置为-1*/
- 
+
 }
 /*-------------图片轮播------------------*/
 #home-banner  img{
@@ -30,27 +30,34 @@ html,body {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	float: left; /*不设置浮动的话会出现图片之间有空隙*/
+	float: left;/* 不设置浮动的话会出现图片之间有空隙*/
 }
+
 #container {
 	border-radius: 4px;
 	position: absolute;
 	left: 50px;
 	width: 1180px;
+	/*width: 92.21%;*/
 	height: 100%;
 	overflow: hidden;
 	/*border-radius: 15%;*/
 	position: absolute;  /*这里的定位为绝对定位absolute或者相对定位relative都可以，就是必须要设置*/
 	z-index: 1;
 }
+
 #list {
 	margin: 0;
 	padding: 0;
+	/*width: 600%;*/
 	width: 7080px;
 	height: 316px;
 	position: absolute;
 	z-index: 2;
+	background-color: red;
 }
+
+
 #button {
 	z-index: 3;
 	height: 10px;
@@ -70,7 +77,7 @@ html,body {
 	height: 1px;
 	border: 1px solid #ccc;
 	background-color: #ccc;
-	
+
 }
 #button > .on {
 	background-color: #fff;
@@ -134,26 +141,25 @@ article{
 
 #cet-article-box{
 	width: 100%;
-	height: 2400px;
-	overflow: hidden;
+	/*height: 2140px;*/
 	position: relative;
 }
-/*.cet-article-box1,.cet-article-box2,.cet-article-box3,.cet-article-box4 {*/
-	/*width: 100%;*/
-	/*height: 100%;*/
-	/*!*position: absolute;*!*/
-	/*display: none;	*/
-/*}*/
+.cet-article-box1,.cet-article-box2,.cet-article-box3,.cet-article-box4 {
+	width: 100%;
+	height: 100%;
+	/*position: absolute;*/
+	display: none;
+}
 #cet-article-box1 {
 	z-index: 2;
 }
 /*#cet-article-box2 {
 	background-color: red;
-	
+
 }
 #cet-article-box3 {
 	background-color: green;
-	
+
 }
 #cet-article-box4{
 	background-color: pink;
@@ -196,21 +202,21 @@ article{
 	height: 150px;
 	margin-left: 255px;
 	margin: 16px auto;
-/*	background-color: #f3f3f3;*/
+	/*	background-color: #f3f3f3;*/
 	position: relative;
 	float: left;
 }
 .label{
-    display: inline;
-    padding: .2em .6em .3em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
 }
 .inner-new header a  {
 	display: inline-block;
@@ -224,37 +230,37 @@ article{
 	/*min-width: 70px;
 	min-height: 20px;*/
 	position: relative;
-    display: inline-block;
-    padding: 4px 6px 3px;
-    font-size: 12px;
-    line-height: 14px;
-    color: #fff;
-    vertical-align: baseline;
-    white-space: nowrap;
-    background-color: #00a2ff;
-    margin-right: 5px;
-    position: relative;
-    top: -2px;
-    border-radius: 0;
+	display: inline-block;
+	padding: 4px 6px 3px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #fff;
+	vertical-align: baseline;
+	white-space: nowrap;
+	background-color: #00a2ff;
+	margin-right: 5px;
+	position: relative;
+	top: -2px;
+	border-radius: 0;
 }
 /*向右的小三角形*/
 .inner-new .label .label-arrow {
 	position: absolute;
-    width: 0;
-    height: 0;
-    vertical-align: top;
-    content: "";
-    top: 6px;
-    right: -4px;
-    border-left: 4px solid #00a2ff;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
+	width: 0;
+	height: 0;
+	vertical-align: top;
+	content: "";
+	top: 6px;
+	right: -4px;
+	border-left: 4px solid #00a2ff;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
 }
 .title-new {
 	display: inline;
-    margin: 0;
-    font-size: 24px;
-    font-weight: inherit;
+	margin: 0;
+	font-size: 24px;
+	font-weight: inherit;
 }
 .title-new a {
 	color: #000;
@@ -263,10 +269,10 @@ article{
 	font-family: "宋体";
 }
 p {
-    margin-bottom: 1em;
-    font-size: 14px;
-    color: #333;
-    margin: 20px 0 10px;
+	margin-bottom: 1em;
+	font-size: 14px;
+	color: #333;
+	margin: 20px 0 10px;
 }
 /*-----------具体内容--------*/
 /*------------脚注----------*/
@@ -285,12 +291,12 @@ p {
 	float: left;
 }
 .calendar {
-    display: inline-block;
-    height: 16px;
-    width: 16px;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
 	background: url('../image/news/calendar.png') no-repeat;
-    font-size: inherit;
-   
+	font-size: inherit;
+
 }
 .pull-left a {
 	display: inline-block;
@@ -314,12 +320,12 @@ p {
 
 }
 .pull-right .read-more {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .pull-right a {
-    margin-right: 15px;
-    color: #8a8a8a;
+	margin-right: 15px;
+	color: #8a8a8a;
 	font-size: 14px;
 	text-align: center;
 	line-height: 16px;
@@ -327,26 +333,27 @@ p {
 }
 .pull-right .to-circle{
 	display: inline-block;
-    height: 16px;
-    width: 16px;
-    margin-left: 6px;
+	height: 16px;
+	width: 16px;
+	margin-left: 6px;
 	background: url('../image/news/to-circle.png') no-repeat;
-    font-size: inherit;
-    vertical-align: middle;
+	font-size: inherit;
+	vertical-align: middle;
 }
 
 /*------------脚注----------*/
 /*-----------------咨讯BOX---------------*/
 
 
-/*----------------------加载更多按钮---------------------*/
+/*----------------------跳转按钮---------------------*/
+
 .news-button {
 	height: 50px;
 	width: 100%;
 	position: relative;
 	margin-top: 30px;
 }
-#replace-more-button {
+.news-button span {
 	width: 150px;
 	height: 40px;
 	border-radius: 40px;
@@ -361,6 +368,8 @@ p {
 	left: 50%;
 	margin-left: -75px;
 }
+
+
 /*------------------------------侧边栏---------------------------*/
 aside {
 	height: 2200px;
@@ -407,17 +416,17 @@ aside {
 }
 .photo-wrapper .text-center img{
 	display: block;
-    vertical-align: middle;
-    position: absolute;
-    top: 10px;
-   /* max-width: 100%;
-    height: auto;*/
+	vertical-align: middle;
+	position: absolute;
+	top: 10px;
+	/* max-width: 100%;
+     height: auto;*/
 
-  }
+}
 .logo-name {
-  	height: 70px;
-  	width: 80px;
-  	margin-top: 14px;
+	height: 70px;
+	width: 80px;
+	margin-top: 14px;
 }
 .textwidget p {
 	color: #ccc;
@@ -462,7 +471,7 @@ aside {
 	border-bottom: 2px solid #ccc;
 }
 .as-link a {
-	display: block; 
+	display: block;
 	height: 20px;
 	color: #ccc;
 	margin-left: 40px;
@@ -484,14 +493,8 @@ aside {
 /*-------------as-link------------*/
 
 /*---------------------push----------------------*/
-.push, 
-#footer { 
-height: 60px; 
-clear:both; 
-}
-
-footer{
-	position: relative;
-	top: 0;
-	left:0;
+.push,
+#footer {
+	height: 60px;
+	clear:both;
 }

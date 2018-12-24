@@ -1,6 +1,8 @@
 /*页面内容*/
 body{
-	background: url("../image/bgc.jpg") no-repeat;
+	background: url("../image/bgc.jpg") no-repeat 0px 0px;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 .content {
 	width: 480px;

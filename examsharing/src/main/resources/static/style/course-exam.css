@@ -1,9 +1,9 @@
 /*section部分*/
 body {
-/*	background: rgba(204,204,204,.2);*/
+	/*	background: rgba(204,204,204,.2);*/
 	background-color: rgba(255,254,0,.05);
 }
- 
+
 /*四六级教程*/
 .exam {
 	width: 100%;
@@ -19,13 +19,15 @@ body {
 	z-index: -1;
 }
 .exam1-box {
-	width: 1184px;
+	/*width: 1184px;*/
+	width: 92.21%;
 	height: 70%;
 	position: absolute;
 	margin: 80px 50px;
 }
 .exam hr{
-	width: 27%;
+	/*width: 27%;*/
+	width: 30%;
 	height: 70%；
 
 }
@@ -38,7 +40,7 @@ body {
 .hr-right {
 	position: absolute;
 	top: 50%;
-	right: 65px; 
+	right: 65px;
 	border: 1px solid  rgba(204,204,204,.5);
 }
 .exam-word {
@@ -53,9 +55,13 @@ body {
 
 /*课程展示*/
 .window{
-	height: 1200px;
-	width: 100%;
+	/*height: 1200px;
+	width: 100%;*/
+	height: 1300px;
+	width: 92.21%;
 	position: relative;
+	margin-left: 3.8%;
+	margin-right: 3.8%;
 }
 .window1,.window2,.window3,.window4{
 	width: 100%;
@@ -99,7 +105,8 @@ body {
 .m-course {
 	float: left;
 	height: 350px;
-	width: 320px;
+	/*width: 320px;*/
+	width: 28%;
 	background-color: #fff;
 	display: inline-block;
 	overflow: hidden;
@@ -109,14 +116,22 @@ body {
 	padding: 20px;
 	background: #fff;
 	vertical-align: top;
-	margin: 30px 50px 20px 0;  /* 上 右  下 左*/
+	/*margin: 30px 50px 20px 0;  *//* 上 右  下 左*/
+	margin: 30px 0 20px 10px;
 
 }
 
 .m-course:nth-child(1){
-	margin-left: 60px;
+	/*margin-left: 60px;*/
+	margin-right: 5.0%;
+}
+.m-course:nth-child(2){
+	margin-right: 5.0%;
 }
 
+.m-course:nth-child(3){
+	margin-right: 0px;
+}
 /*.m-course:nth-child(4){
 	margin-right: 0;
 }
@@ -197,7 +212,7 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 45%;
-	
+
 }
 .exam3-button span {
 	width: 30px;
