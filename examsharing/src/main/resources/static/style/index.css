@@ -1,0 +1,432 @@
+body {
+	min-width: 1284px;
+	background-color: rgba(204,204,204,.2);
+}
+#page-nav {
+	position: relative;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+/*------------------------------header部分----------------------------------*/
+
+#head{
+	position: relative; /*z-index必须配合position定位属性进行设置*/
+	z-index: 1;  /*必须把这个z-index设置为除-1之外的数，cursor：pointer;语句才会生效，
+	              不能会被header整个div覆盖掉*/
+}
+#page-nav {
+	background-color: rgba(251,248,243);
+}
+#home-banner {
+	width: 1284px;
+	height: 664px; /*原来为600px*/
+	background: url(../image/index/navbar.jpg) no-repeat ;
+	position: relative;
+	z-index: -1;  
+	/*div (page-nav)的position为relative，符合标准流，
+	这里为absolute，脱离标准流，不占位置，它将覆盖上一层DIV
+	将其置于底层*/
+}
+/*.logo img{
+	margin: 0;
+	float: left;
+}
+*//*---------------------------------图片轮播-------------------------------*/
+#home-aside  img{
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left; /*不设置浮动的话会出现图片之间有空隙*/
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+#home-aside{
+	width: 500px;
+	height: 400px;
+	/*background-color: rgba(255,255,255,0.4);*/
+	z-index: 1;
+	position: absolute;
+	top: 150px;  /*原来为90px*/
+	right: 110px;
+	border-radius: 15%;
+}
+#container {
+	width: 500px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 15%;
+	position: absolute;  /*这里的定位为绝对定位absolute或者相对定位relative都可以，就是必须要设置*/
+	z-index: 1;
+}
+#list {
+	margin: 0;
+	padding: 0;
+	width: 3500px;
+	height: 400px;
+	position: absolute;
+	z-index: 2;
+}
+#button {
+	z-index: 3;
+	height: 10px;
+	width: 200px;
+	position: absolute;
+	left: 200px;
+	bottom: 20px;
+}
+#button  span {
+	cursor: pointer;
+	font-size: 0;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	/*background-color: rgba(255,154,0,.5);*/
+	background-color: #ccc;
+	
+}
+#button > .on {
+	width: 18px;
+	border-radius: 30px;
+	/*background-color: rgb(255,154,0);*/
+}
+.arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 180px;
+	display: none;
+	width: 40px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	line-height: 40px;
+	/*color: #ff9a00;*/
+	color: #ccc;
+	background-color: rgba(255,255,255,.3);
+	z-index: 3;
+}
+
+
+#container:hover .arrow{
+	display: block;
+	cursor: pointer;
+}
+#prev {
+	left: 5px;
+}
+#next {
+	right: 5px;
+}
+/*------------图片轮播结束-----------*/
+
+/*---------------箭头：更多more----------------*/
+
+#more {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	bottom: 20px;
+	left: 642px;
+}
+
+
+/*--------------------------------------header结束------------------------------*/
+
+/*------------------------------------section部分--------------------------------*/
+/*----------精品教程开始----------*/
+.kx-course {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	/*background-color: rgba(204,204,204,.2);*/
+}
+.kx-word { 
+	height: 100px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+.kx-word span {
+	font-family: "Arial" ;
+	font-size: 35px;
+	color: #000;
+}
+
+#main-course {
+	width: 100%;
+	height: 518px;
+	position: relative;
+	top: 100px;
+/*	background-color: rgba(255,255,255,.4);*/
+	/*padding-top: 20px; *//* 与精品课程这几个字的间距*/
+
+
+}
+.m-course {
+	float: left;
+	height: 350px;
+	width: 280px;
+	background-color: #fff;
+	display: inline-block;
+	overflow: hidden;
+	border: 1px solid #ebebeb;
+	border-radius: 6px;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	vertical-align: top;
+	margin: 30px 20px 20px 0;  
+
+}
+.m-course:nth-child(1){
+	margin-left: 50px;
+}
+
+/*----单个教程模块开始-----*/
+
+.classify{
+	width: 60px;
+	height: 20px;
+	padding: 0 10px;
+	background-color: #ccc;
+	font-size: 16px;
+	color: #fff;
+	display: block;
+	font-family: "宋体"；
+}
+.tit {
+	padding-left: 0;
+	background-color: #fff;
+	color: #000;
+	padding: 20px 0 20px 0; /*上 右  下  左*/
+	font-size: 27px;
+	font-weight: 700;
+	font-family: "宋体";
+}
+.time{
+	font-size: 15px;
+	color: rgba(0,0,0,.6);
+
+}
+.time ins{
+	margin: 0 6px;
+}
+.teacher {
+	margin-top: 35px;
+}
+.teacher-num1 {
+	width: 40px;
+	height: 80px;
+}
+.teacher-msg img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	float: left;
+}
+.teacher-name {
+	font-size: 14px;
+	color: rgba(0,0,0,.6);
+	margin-left: 6px;
+}
+.about-more {
+	border-top: 1px solid #ccc;
+}
+.about-more span {
+	padding-top: 20px;
+	display: block;
+	font-size: 16px;
+	color: rgba(0,0,0,.6);
+	float: right;
+}
+
+/*鼠标经过时的变化*/
+.m-course:hover {
+	margin-top: 15px;
+	border-top: 2px solid #ff9a00;
+	/*box-shadow: h-shadow v-shadow blur spread color inset;*/
+	box-shadow: 0 5px 8px 5px rgba(0,0,0,0.2);
+}
+
+/*----单个教程模块结束-----*/
+/*----------精品课程结束----------*/
+
+/*--------------最新咨讯开始----------*/
+.kx-News {
+	width: 100%;
+	height: 450px;
+	position: relative;
+	z-index: 1;
+}
+.new{
+	/*height: 50%;
+	width: 29.6%;*/
+	height: 225px;
+	width: 380px;
+	float: left;
+	margin: 132px 10px;
+	border-radius: 4px;
+	background-color: rgba(255,255,255,.5);
+	z-index: 2;
+	overflow: hidden;
+	position: relative;
+}
+
+.news1 {
+	margin-left: 50px;
+	background: url(../image/index/new1.png);
+}
+.news2 {
+	background: url(../image/index/new2.png);
+}
+.news3 {
+	margin-right: 50px;
+	background: url(../image/index/new3.png);
+}
+.new-img {
+	width: 380px;
+	overflow: hidden;
+	z-index: 1;
+}
+.new-h4{
+	margin-top: 20px;
+	font-size: 30px;
+	font-family: "宋体";
+	color: #fff;
+	z-index: 2;
+	margin-left: 20px;
+}
+.new-span {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	margin-top: 10px;
+	display: inline-block;
+	width: 90px;
+	height: 32px;
+	font-size: 14px;
+	color: #fff;
+	font-family: "宋体";
+	background-color: #ff9a00;
+	z-index: 2;
+	border-radius: 100px;
+	line-height: 32px;
+	text-align: center;
+	font-weight: 700;
+
+}
+.new:hover {
+	margin-top: 122px;
+	box-shadow: 0 10px 10px 8px rgba(0,0,0,0.5);
+}
+
+
+/*-------------最新咨询开始-----------*/
+/*-------------图标开始-----------*/
+.kx-ad {
+	height: 870px;
+}
+.ad-word {
+	margin-top: 40px;
+	height: 150px;
+	width: 100%;
+}
+.ad-word h1 {
+	font-size: 50px;
+	font-weight: lighter;
+	text-align: center;
+	font-family: "Arial";
+}
+.ad-box {
+	height: 620px;
+	margin: 0 50px;
+	/*background-color: #f9f8f3;*/
+}
+.ad-main1,.ad-main2 {
+	height: 50%;
+	width: 100%;
+}
+.ad-main1 {
+	border-bottom: 1px solid   rgba(204,204,204,.5);
+}
+.box1,.box2,.box3{
+	width: 33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	position: relative;
+	z-index: 0; /*这里必须设置为0，不然盒子会覆盖固定的顶部导航栏*/
+}
+.box1,.box2 {
+	border-right: 1px solid  rgba(204,204,204,.5);
+}
+/*.ad-main1 .box1,.ad-main1 .box3,.ad-main2 .box2{
+	background-color: rgba(255,204,0,0.2);
+}
+.ad-main1 .box2,.ad-main2 .box1,.ad-main2 .box3 {
+	background-color: rgba(255,255,255,.4);
+}*/
+.ad-main1 div img,.ad-main2 div img{
+	margin-top: 100px;
+}
+.skuShow {
+	background: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: width .3s, height .3s,opacity .3s;
+    top: 0;
+    z-index: 5;
+}
+#skuShow1,#skuShow2,#skuShow3 {
+	  opacity: 0;
+}
+.skuShow p {
+	font-size: 40px;
+	font-weight: lighter;
+	margin-top: 40px;
+}
+.skuShow span {
+	display: block;
+	height: 35px;
+	width: 150px;
+	text-align: center;
+	line-height: 35px;
+	border: 1px solid #ff9a00;
+	margin-top: 10px;
+	border-radius: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+}
+.span-course {
+	top: 120px;
+
+}
+.span-news {
+	top: 180px;
+}
+.skuShow span a {
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	display: inline-block;
+	color: #ff9a00;
+}
+.skuShow span a:hover {
+	background-color: #ff9a00;
+}
+.skuShow span a:hover {
+	color: #fff;
+}
+/*-------------图标结束-----------*/
+

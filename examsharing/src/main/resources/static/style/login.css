@@ -1,0 +1,68 @@
+/*页面内容*/
+body{
+	background: url("../image/bgc5.jpg") no-repeat;
+
+}
+.content {
+	width: 460px;
+	height: 680px;
+	background-color: rgba(255,255,255,.3);
+	float: right;
+	position: relative;
+}
+.login {
+	width: 360px;
+	height: 580px;
+	background-color: #fff;
+	margin-top: 40px;
+	margin-right: 50px;
+	float: right;
+}
+.logo {
+	position: absolute;
+	top: 100px;
+	left: 150px;
+}
+.inputmsg {
+	position: absolute;
+	top: 240px;
+	left: 100px;
+}
+.inputmsg img {
+	width: 20px;
+
+}
+.inputmsg input {
+	border: none;
+}
+.inputmsg #forget {
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#forget a{
+	color: #ccc;
+}
+#forget:hover a{
+	color: #000;
+}
+#loginName {
+	margin-bottom: 30px;
+}
+#loginName, #loginPassword {
+	border-bottom: 1px solid #ccc;
+	width: 250px;
+}
+
+#login {
+	width: 250px;
+	height: 40px;
+	font-family: "宋体";
+	font-size: 20px;
+	color: #fff;
+	background-color: #ff9a00;
+	position: absolute;
+	top: 400px;
+	left: 100px;
+	border: none;
+}

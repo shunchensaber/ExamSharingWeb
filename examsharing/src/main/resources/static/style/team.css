@@ -1,0 +1,177 @@
+/*section部分*/
+/*---------------------关于我们------------------*/
+.banner {
+	height: 682px; /*原来是618px*/
+	width: 100%;
+	background: url(../image/team/bg.jpg) no-repeat;
+	position: relative;
+}
+#about-us {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -150px; 
+}
+#about-us hr {
+	border: 1px solid #fff;
+}
+#about-us h1 {
+	font-size: 60px;
+	font-weight: lighter;
+	color: #fff;
+	margin: 20px 0 20px 0;/*上 右 下 左*/
+	letter-spacing: 2px;
+}
+
+/*-------------------------------队员介绍----------------------------*/
+.teammate1, .teammate2, .teammate3,.schedule,.contract  {
+	height: 618px;
+	width: 100%;
+}
+.pre-nav {
+	background-color: #1b0d59;
+}
+.teammate1 {
+	background-color: rgba(0,0,0,.4);
+}
+.teammate2 {
+	background-color: rgba(0,0,0,.5);
+}
+.teammate3 {
+	background-color: rgba(0,0,0,.2);
+}
+.pre1, .pre2, .pre3 {
+	/*width: 630px;*/
+	width: 530px;
+	height: 354px;
+	border-radius: 40px;
+	margin: 132px auto;
+	overflow: hidden;
+	background-color: rgba(255,255,255,.1);
+}
+.pre1, .pre3{
+	margin-left: 50px;
+	float: left;
+}
+.pre2 {
+	margin-right: 50px;
+	float: right;
+}
+
+.msg1, .msg2, .msg3 {
+	width: 600px;
+	height: 354px;
+	margin: 132px auto;
+	overflow: hidden;
+	/*background-color: rgba(255,255,255,.1);*/
+}
+.msg1, .msg3 {
+	margin-right: 50px;
+	float: right;
+
+}
+.msg2 {
+	margin-left: 50px;
+	float: left;
+}
+.name{
+	margin-top: 50px;
+	color: #fff;
+	font-size: 50px;
+	font-family: "宋体";
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+.work{
+	color: #fff;
+	font-size: 40px;
+	font-weight: 500;
+	font-family: "宋体";
+	display: block;
+	margin-bottom: 25px;
+}
+.hope{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300;
+	font-family: "宋体";
+}
+.msg13 {
+	margin-left: 100px;
+}
+
+/*--------------------联系我们-----------------*/
+.contract {
+	/*background-color: #B361FF;*/
+	background-color: #1b0d59;
+}
+.contract-box1, .contract-box2 {
+	width: 560px;
+	height: 354px;
+	border-radius: 20px;
+	float: left;
+	margin: 132px 20px;
+	/*background-color: rgba(226,112,255,0.4);*/
+	background-color: rgba(255,255,255,.1);
+}
+.contract-box1 {
+	margin-left: 50px;
+}
+.contract h1{
+	color: #fff;
+	font-size: 35px;
+	font-family: "宋体";
+	margin: 40px auto 20px 25px;
+	/*margin-left: 25px;  上 右 下 左
+	margin-top: 40px;*/
+}
+.contract hr {
+	width: 50px;
+	border: 1.5px solid #fff;
+	margin-left: 25px;
+	margin-bottom: 40px;
+
+}
+.contract span{
+	color: #fff;
+	font-size: 20px;
+	font-family: "宋体";
+	margin-left: 25px;
+	display: block;
+	margin-top: 15px;
+}
+
+/*-----------------------文字动画效果-------------------*/
+.aboutUs {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 0.5s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}
+.msg1 {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 2s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}
+.msg2 {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 3s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}
+.msg3 {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 5s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}
+.contract1 {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 6s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}
+.contract2 {
+	animation-duration: 2s;  /*动画持续时间*/
+	animation-delay: 6s;    /*动画延迟时间*/
+	animation-iteration-count: 1;  /* 动画执行次数*/
+}

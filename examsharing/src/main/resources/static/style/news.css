@@ -1,0 +1,196 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/*section部分*/
+section {
+	width: 100%;
+	height: 700px;
+	background-color: #fff;     
+	margin-top: 60px;
+}
+
+/*------------------------------文章内容-----------------------*/
+.content {
+	width: 64%;
+	height: 2200px;
+	border: 1px solid #f3f3f3;
+	box-shadow: #f3f3f3  1px 1px 1px 1px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 40px;
+}
+.position {
+	height: 70px;
+	width: 90%;
+	border-bottom: 1px solid #ccc;
+	margin-left: 40px;
+	position: relative;
+
+}
+.position span, .position a{
+	color: #ccc;
+	display: inline-block;
+	position: relative;
+	top: 30px;
+	float: left;
+	letter-spacing: 2px;
+}
+.position a:hover {
+	color: #ff9a00;
+}
+.content h2 {
+	font-size: 40px;
+	color: #000;
+	display: inline-block;
+	margin: 40px 40px 20px;
+}
+.content p {
+	display: inline-block;
+	font-size: 18px;
+	margin: 10px 50px;
+	line-height: 30px;
+
+}
+.content h3 {
+	display: inline-block;
+	font-size: 22px;
+	margin: 10px 50px;
+	line-height: 30px;
+}
+
+/*------------------------------文章内容-----------------------*/
+
+/*------------------------------侧边栏---------------------------*/
+aside {
+	height: 2200px;
+	width: 26%;
+	float: right;
+	margin-right: 50px;
+	margin-top: 40px;
+	/*background-color: skyblue;*/
+}
+/*-------------as-about----------*/
+.as-about {
+	width: 100%;
+	height: 270px;
+	background-color: #fff;
+	border: 1px solid #f3f3f3;
+	margin-bottom: 20px;
+}
+.photo-background {
+	height: 135px;
+	width: 100%;
+}
+.photo-background img {
+	height: 135px;
+	width: 100%;
+}
+
+.text-center {
+	height: 100px;
+	width: 100px;
+	background-color: #fff;
+	/*border: rgba(255,255,255,.4) 4px solid;*/
+	box-shadow: #f3f3f3  1px 1px 1px 1px;
+	border-radius: 50%;
+	margin: -50px 0 0;
+	position: relative;
+	z-index: 1;
+	left: 167px;
+	margin-left: -50px;
+}
+.photo-wrapper .text-center a {
+	position: absolute;
+	display: block;
+	top: -10px;
+	left: 6px;
+}
+.photo-wrapper .text-center img{
+	display: block;
+    vertical-align: middle;
+    position: absolute;
+    top: 10px;
+   /* max-width: 100%;
+    height: auto;*/
+
+  }
+.logo-name {
+  	height: 70px;
+  	width: 80px;
+  	margin-top: 14px;
+}
+.textwidget p {
+	color: #ccc;
+	font-weight: inherit;
+	font-size: 16px;
+	text-align: center;
+	padding: 15px;
+}
+/*-------------as-about----------*/
+/*-------------as-photo----------*/
+.as-photo {
+	width: 100%;
+	height: 270px;
+	background-color: #fff;
+	border: 1px solid #f3f3f3;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.as-photo img {
+	width: 100%;
+	height: 100%;
+	transition: all 0.6s;
+}
+/*鼠标经过时图片放大*/
+.as-photo img:hover {
+	transform: scale(1.1);
+}
+/*-------------as-photo----------*/
+/*-------------as-link------------*/
+.as-link {
+	width: 100%;
+	height: 300px;
+	background-color: #fff;
+	border: 1px solid #f3f3f3;
+	margin-bottom: 20px;
+}
+.as-link p{
+	font-size: 20px;
+	color: #000;
+	font-weight: 700;
+	margin-left: 10px;
+	padding: 10px;
+	border-bottom: 2px solid #ccc;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.as-link a {
+	display: block; 
+	height: 20px;
+	color: #ccc;
+	margin-left: 40px;
+	margin-bottom: 6px;
+	background: url(../image/news/net.png) no-repeat ;
+	text-align: left;
+	padding-left: 26px;
+	vertical-align: center;
+}
+.as-link a:hover {
+	color: #ff9a00;
+}
+.as-article a {
+	background: url(../image/news/article.png) no-repeat ;
+}
+.as-rank a {
+	background: url(../image/news/rank.png) no-repeat ;
+}
+/*-------------as-link------------*/
+/*------------------------------侧边栏---------------------------*/
+
+/*---------------------push----------------------*/
+.push, 
+#footer { 
+height: 60px; 
+clear:both; 
+} 
