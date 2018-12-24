@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>四六级咨讯</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/news-cet.css">
@@ -71,8 +72,8 @@
             <!-- 四六级咨讯 -->
             <article>
                 <div id="cet-article-box">
-                    <div th:if="${newslist} != null" class="cet-article-box1" id="cet-article-box1"
-                    th:fragment="newsfragment">
+                    <div class="cet-article-box1" id="cet-article-box1"
+                         th:fragment="newsfragment">
                         <ul>
                             <li th:each="news : ${newslist}">
                                 <div class="new">
@@ -106,8 +107,11 @@
                 </div>
 
                 <div class="news-button">
-                    <span id="replace-more-button">上一页</span>
-                    <span>下一页</span>
+                    <!-- 进来默认第一页 所以要隐藏， 之后在点击时间开启 我这里为了测试先去掉-->
+                    <span style="" id="prepage">&lt; 上一页</span>
+                    <span style="display: none" id="pageCount" th:text = "${page_count}"></span>
+                    <span id = "now_page">第 1 页</span>
+                    <span id="nextpage">下一页 &gt;</span>
                 </div>
             </article>
         </section>
@@ -191,18 +195,56 @@
     </footer>
 </div>
 <script type="text/javascript">
-    var now_page = 1;   // [0 pageCount]
+    var pageCount = 0
+    $(document).ready(function () {
+        pageCount = parseInt(document.getElementById("pageCount").innerText)
+    })
+    var now_page = 0;   // [0 pageCount]
+    if(now_page == pageCount){
+        $("#prepage").css("display","none");
+    }
 
-    $("#replace-more-button").click(function () {
+
+    $("#nextpage").click(function () {
         var url = './news/list';
+        if (now_page <= pageCount && now_page >= 0) {
+            $(".cet-article-box1").load(url,
+                {
+                    page: ++now_page
+                }
+            )
+        }
 
-        $(".cet-article-box1").load(url,
-            {
-                page: now_page++
-            }
-        )
+        if (now_page == pageCount-1) {
+            // 隐藏下一个
+            $(this).css("display","none");
 
+        }
+
+        // 显示上一个
+        $("#prepage").css("display","block");
+        document.getElementById("now_page").innerText = "第 " + (now_page+1) + " 页" ;
     });
+
+    $("#prepage").click(function () {
+        var url = './news/list';
+        if (now_page <= pageCount && now_page >= 0) {
+            $(".cet-article-box1").load(url,
+                {
+                    page: --now_page
+                }
+            )
+        }
+        if (now_page == 0) {
+            // 隐藏上一个
+            $(this).css("display","none");
+        }
+
+        // 显示下一个
+        $("#nextpage").css("display","block");
+        document.getElementById("now_page").innerText = "第 " + (now_page+1) + " 页" ;
+    });
+
 
 
 </script>

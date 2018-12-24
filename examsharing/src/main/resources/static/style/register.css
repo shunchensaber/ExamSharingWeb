@@ -4,6 +4,13 @@ body{
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+input {
+	background-color: #fff;
+}
+input:focus { 
+	outline: none; 
+	background-color: #fff;
+} 
 .content {
 	width: 480px;
 	height: 680px;
@@ -25,41 +32,26 @@ body{
 	top: 100px;
 	left: 100px;
 }
+
 .inputmsg {
 	position: absolute;
 	top: 240px;
 	left: 55px;
 }
-.inputmsg img {
-	width: 20px;
-
+.username, .password, .cPassword{
+	margin-top: 26px;
 }
+
 .inputmsg input {
 	border: none;
 	border-bottom: 1px solid #ccc;
 }
-.inputmsg #forget {
-	float: right;
-	margin-top: 10px;
-	font-size: 14px;
-}
-#forget a{
-	color: #ccc;
-}
-#forget:hover a{
-	color: #000;
-}
-#userName, #password {
-	margin-bottom: 30px;
-}
-
-#userName, #password, #msPassword{
-	width: 276px;
-}
 input{
 	float: right;
+	margin-right: 10px;
+	width: 206px;
 }
-#register {
+#re_button {
 	width: 260px;
 	height: 40px;
 	font-family: "宋体";
@@ -71,3 +63,30 @@ input{
 	left: 55px;
 	border: none;
 }
+#info_msg{
+	margin-top: 20px;
+	color: red;
+}
+/*.inputmsg #forget {
+	float: right;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#forget a{
+	color: #ccc;
+}
+#forget:hover a{
+	color: #000;
+}*/
+/*#userName, #password {
+	margin-bottom: 30px;
+}
+
+#userName, #password, #msPassword{
+	width: 276px;
+}
+input{
+	float: right;
+}
+
+*/

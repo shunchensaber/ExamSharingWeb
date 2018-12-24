@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/login.css">
 </head>
-<body>
+<body> 
 <div class="main-wrapper">
     <div class="content">
         <div class="login">
@@ -23,13 +23,12 @@
                         <span>|</span>
 
                         <input th:value="*{username != null}? *{username} : ''" type="text" name="username"
-                               id="username" placeholder="用户名" class="passwordInput">
-
+                               id="username" placeholder="用户名" class="passwordInput"  autocomplete="off">
                     </div>
                     <div id="loginPassword">
                         <img src="./image/password.png">
                         <span>|</span>
-                        <input type="password" name="password" id="password" placeholder="密码" class="passwordInput">
+                        <input  th:value="*{password != null}? *{password} : ''" type="password" name="password" id="password" placeholder="密码" class="passwordInput"  autocomplete="off">
                     </div>
                     <p id="info_p" style="color:red;" th:if="${login_tag} != null" th:text="${msg}"/>
                     <span id="forget"><a href="">忘记密码</a></span>

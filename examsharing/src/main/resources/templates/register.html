@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="./style/reset.css">
 	<link rel="stylesheet" href="./style/main.css">
 	<link rel="stylesheet" href="./style/register.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -16,21 +18,31 @@
 					<img src="./image/Smart2.png">
 					<img src="./image/logo2.png" > 
 				</div>
-				<div class="inputmsg">
-					<div id="userName">
-						手机号：
-                        <input type="password" name="password" id="userTypePwd" placeholder="输入手机号码">
-					</div>
-					<div id="password">
-						密 码：
-                        <input type="password" name="password" id="userTypePwd" placeholder="密码">
-					</div>
-					<div id="msPassword">
-						确认密码：
-                        <input type="password" name="password" id="userTypePwd" placeholder="再次输入密码">
-					</div>
-				</div>	
-				<input type="button" name="注册" id="register" value="立即注册">
+				 <form method="post" action="./register/check">
+	                <div class="inputmsg">
+	                    <div class="username">
+	                        用户名：
+	                        <input th:value="*{username != null}? *{username} : ''" type="text" name="username"
+	                               id="username" placeholder="用户名" class="usernameInput"  autocomplete="off">
+						
+
+	                    </div>
+	                    <div class="password">
+	                        密码：
+	                        <input th:value="*{password != null}? *{password} : ''" type="password" name="password" id="password" placeholder="密码" class="passwordInput"  autocomplete="off">
+                            
+	                    </div>
+	                    <div class="cPassword">
+	                        确认密码：
+	                        <input th:value="*{cpassword != null}? *{cpassword} : ''" type="password" name="cpassword" id="cpassword" placeholder="再次输入密码" class="cPasswordInput"  autocomplete="off">
+
+	                    </div>
+	                    <p id="info_p" style="color:red;" th:if="${login_tag} != null" th:text="${msg}"/>
+	                    <p id="info_msg"></p>
+	                   
+	                </div>
+	               <input type="button" name="注册" value="立即注册" id="re_button">
+	            </form>
 			</div>
 		</div>
 	</div>

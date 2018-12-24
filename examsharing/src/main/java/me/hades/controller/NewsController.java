@@ -49,6 +49,7 @@ public class NewsController {
     public String news_cet(ModelMap model){
         Pageable pageable = new PageRequest(0, PAGE_SIZE, Sort.Direction.DESC, "date");
 //        System.out.println(newsRepository.findAll(pageable).getContent());
+        model.put("page_count", (newsRepository.findAll().size() / PAGE_SIZE) );
         model.put("newslist", newsRepository.findAll(pageable).getContent());
         return "news-cet";
     }

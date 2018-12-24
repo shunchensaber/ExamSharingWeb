@@ -5,6 +5,13 @@ body{
 	background-size: cover;
 
 }
+input {
+	background-color: #fff;
+}
+input:focus { 
+	outline: none; 
+	background-color: #fff;
+} 
 .content {
 	width: 460px;
 	height: 680px;
