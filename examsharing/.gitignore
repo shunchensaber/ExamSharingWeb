@@ -16,6 +16,9 @@
 *.iml
 *.ipr
 
+
+application-dev.yml
+
 ### NetBeans ###
 /nbproject/private/
 /build/

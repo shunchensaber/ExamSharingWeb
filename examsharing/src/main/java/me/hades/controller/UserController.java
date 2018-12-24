@@ -1,5 +1,8 @@
 package me.hades.controller;
 
+import me.hades.entiy.User;
+import me.hades.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +23,8 @@ import java.util.logging.Logger;
 @Controller
 public class UserController {
 
-
+    @Autowired
+    UserRepository userRepository;
 
     @RequestMapping("/login")
     public String login(Map<String, Object> model, HttpSession session){
@@ -38,12 +42,16 @@ public class UserController {
                                    @RequestParam("password") String password,
                              HttpSession session){
         session.setAttribute("username", username);
-        if (username.equals("123456") && password.equals("123456")) {
-            return "redirect:/";
-        } else {
-            session.setAttribute("login_tag", false);
-            return "redirect:/login";
+        if (checkUserExist(username)) {
+            User user = userRepository.findUserByUsername(username);
+            if (user.getPassword().equals(password)) {
+                return "redirect:/";
+            }
         }
+        // 只要不是正确登录，就都是失败
+        session.setAttribute("login_tag", false);
+        return "redirect:/login";
+
 
     }
 
@@ -55,4 +63,16 @@ public class UserController {
     }
 
 
+    /**
+     * 根据用户名检查用户是否存在
+     * @param username 用户名
+     * @return true 代表存在 false 代表不存在
+     */
+    private boolean checkUserExist(String username) {
+        if (null == userRepository.findUserByUsername(username)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
