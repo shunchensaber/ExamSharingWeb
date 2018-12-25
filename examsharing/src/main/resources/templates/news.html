@@ -53,7 +53,12 @@
 				<article th:utext="${news.content}">
 
 				</article>
-
+				<div class="toggle-button">
+					<ul>
+						<li><a th:href="'./'+${news.id-1}">&lt;上一篇</a></li>
+						<li><a th:href="'./'+${news.id+1}">下一篇&gt;</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- 侧边栏 -->
 			<!--<aside>-->

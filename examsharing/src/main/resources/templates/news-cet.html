@@ -91,7 +91,7 @@
 										<a href="" th:text="${news.date}"><i class="calendar"></i></a>
 									</span>
                                         <span class="pull-right">
-										<a href="" class="read-more">阅读全文<i class="to-circle"></i></a>
+										<a th:href="'./news/'+${news.id}" class="read-more">阅读全文<i class="to-circle"></i></a>
 									</span>
                                     </div>
                                 </div>
