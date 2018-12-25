@@ -20,10 +20,25 @@
                     <img th:src="@{/image/Smart2.png}">
                     <img th:src="@{/image/logo2.png}">
                     <!-- 酷享 --></a></div>
-                <ul class="navbar-button">
-                    <li><a th:href="@{/login}">登录</a></li>
-                    <li><a th:href="@{/register}">注册</a></li>
-                </ul>
+                <th:block th:if='${login_tag == false}'>
+                    <ul  class="navbar-button" id="navbar-button" >
+                        <li><a th:href="@{/login}">登录</a></li>
+                        <li><a th:href="@{/register}">注册</a></li>
+                    </ul>
+                </th:block>
+                <th:block th:if="${login_tag == true}">
+                    <ul class="navbar-logo" id="navbar-logo" >
+                        <li><p th:text="${username}"></p></li>
+                        <li id="userimg-box"><img th:src="@{/image/user.png}"></li>
+                    </ul>
+                    <div id="userDiv">
+                        <ul>
+                            <li><a href="">了解更多</a></li>
+                            <li><a href="">进入学习</a></li>
+                            <li><a href="">安全退出</a></li>
+                        </ul>
+                    </div>
+                </th:block>
                 <ul class="navbar-list">
                     <li class="parentLi"><a href="/" class="active">首页</a></li>
                     <li class="parentLi"><a th:href="@{/news-cet}">咨讯</a>
@@ -129,18 +144,20 @@
                 </div>
             </div>
             <div class="as-link as-article">
-                <ul th:each="news : ${newslist}">
-                    <li ><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
+                <p>最新文章</p>
+                <ul >
+                    <li th:each="news : ${newslist}"><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
                 </ul>
             </div>
             <div class="as-photo"><img th:src="@{/image/news/photo1.jpg}"></div>
             <div class="as-link as-rank">
-                <ul th:each="news : ${newslist}">
-                    <li ><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
+                <p>点击排行</p>
+                <ul>
+                    <li th:each="news : ${newslist}" ><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
                 </ul>
             </div>
             <div class="as-photo"><img th:src="@{/image/news/photo2.jpg}"></div>
-            <div class="as-link" th:text="${pageCount}">
+            <div class="as-link-right">
                 <p>网站推荐</p>
                 <a href="http://cet.etest.net.cn/ ">全国英语四六级考试官网</a>
                 <a href="https://yz.chsi.com.cn/">中国研究生招生信息网</a>

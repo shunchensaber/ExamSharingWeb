@@ -23,10 +23,25 @@
 						<img th:src="@{/image/Smart2.png}">
 						<img th:src="@{/image/logo2.png}" > 
 						<!-- 酷享 --></a></div>
-					<ul class="navbar-button">
-						<li><a th:href="@{/login}">登录</a></li>
-						<li><a th:href="@{/register}">注册</a></li>
-					</ul>
+					<th:block th:if='${login_tag == false}'>
+						<ul  class="navbar-button" id="navbar-button" >
+							<li><a th:href="@{/login}">登录</a></li>
+							<li><a th:href="@{/register}">注册</a></li>
+						</ul>
+					</th:block>
+					<th:block th:if="${login_tag == true}">
+						<ul class="navbar-logo" id="navbar-logo" >
+							<li><p th:text="${username}"></p></li>
+							<li id="userimg-box"><img th:src="@{/image/user.png}"></li>
+						</ul>
+						<div id="userDiv">
+							<ul>
+								<li><a href="">了解更多</a></li>
+								<li><a href="">进入学习</a></li>
+								<li><a href="">安全退出</a></li>
+							</ul>
+						</div>
+					</th:block>
 					<ul class="navbar-list">
 						<li class="parentLi"><a href="/" class="active">首页</a></li>
 						<li class="parentLi"><a th:href="@{/news-cet}">咨讯</a>
