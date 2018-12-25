@@ -10,6 +10,8 @@ body {
 	
 } 
  
+
+
 /*header导航栏样式*/
 #page-nav {
 	width: 100%;
@@ -96,7 +98,7 @@ nav ul li ul li a {
 
 .navbar-button{
 	margin: 15px auto;
-	display: none;
+	/*display: none;*/
 }
 .navbar-button li {
 	width: 80px;
@@ -128,7 +130,8 @@ nav ul li ul li a {
 
 /*---------------------登录成功后的个人头像--------------*/
 .navbar-logo li {
-	width: 80px;
+	max-width: 80px;
+	width: 60px;
 	height: 64px;
 	line-height: 64px;
 	display: inline-block;
@@ -140,11 +143,18 @@ nav ul li ul li a {
 	overflow: hidden;
 	margin-top: 7px;
 }
+.navbar-logo li p {
+	color: #ccc;
+	margin: 0;
+	padding: 0;
+}
 .navbar-logo li img {
 	display: inline-block;
 	border-radius: 50%;
 	margin-top: 7px;
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
 /*这里加多了一个类，对具体的类进行操作，解决对于子元素的继承问题 */

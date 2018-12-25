@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.context.LazyContextVariable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Created by hades on 2018/12/24.
- *
+ * <p>
  * 资讯控制类
  */
 @Controller
@@ -31,13 +32,13 @@ public class NewsController {
 
     @RequestMapping("/news/{id}")
     public String news(@PathVariable("id") Integer id,
-            ModelMap model){
-        model.put("news", newsRepository.findEduNewsById(id) );
+                       ModelMap model) {
+        model.put("news",newsRepository.findEduNewsById(id));
         return "news";
     }
 
     @RequestMapping("/news/list")
-    public String newsList(@RequestParam("page") Integer page, ModelMap model){
+    public String newsList(@RequestParam("page") Integer page, ModelMap model) {
 
         Pageable pageable = new PageRequest(page, PAGE_SIZE, Sort.Direction.DESC, "date");
 //        System.out.println(newsRepository.findAll(pageable).getContent());
@@ -46,17 +47,20 @@ public class NewsController {
     }
 
     @RequestMapping("/news-cet")
-    public String news_cet(ModelMap model){
+    public String news_cet(ModelMap model) {
         Pageable pageable = new PageRequest(0, PAGE_SIZE, Sort.Direction.DESC, "date");
 //        System.out.println(newsRepository.findAll(pageable).getContent());
-        model.put("page_count", (newsRepository.findAll().size() / PAGE_SIZE) );
+        model.put("page_count", (newsRepository.findAll().size() / PAGE_SIZE));
         model.put("newslist", newsRepository.findAll(pageable).getContent());
         return "news-cet";
     }
 
     @RequestMapping("/news-exam")
-    public String news_exam(Map<String, Object> model){
+    public String news_exam(Map<String, Object> model) {
 
         return "news-exam";
     }
+
+
+
 }

@@ -158,26 +158,26 @@ window.onload = function(){
 
 // -------------iv刚出现div里面的内容进入效果--------
  	function addAmimate(){
- 		 $('p').addClass('animated bounce');
- 		 $('span').addClass('animated pulse');
+ 		 $('.kx-ad p').addClass('animated bounce');
+ 		 $('.kx-ad span').addClass('animated pulse');
  	}
  	// 必须清楚添加的动画，下次进入才能再次执行
  	function removeAnimate(){
- 		 $('p').removeClass('animated  bounce');
- 		 $('span').removeClass('animated pulse');
+ 		 $('.kx-ad p').removeClass('animated  bounce');
+ 		 $('.kx-ad span').removeClass('animated pulse');
  	}
 // -------------iv刚出现div里面的内容进入效果--------
 
 //个人详情页
 
 	function onmouseUserlogo(){
-		$("#userimg-box").mouseover(function(){
+		$("#navbar-logo").mouseover(function(){
 			$("#userDiv").css("opacity","1");
 		});
 		$("#userDiv").mouseover(function(){
 			$("#userDiv").css("opacity","1");
 		});
-		$("#userimg-box").mouseout(function(){
+		$("#navbar-logo").mouseout(function(){
 			$("#userDiv").css("opacity","0");
 		});
 		$("#userDiv").mouseout(function(){

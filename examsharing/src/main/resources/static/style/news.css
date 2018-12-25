@@ -19,19 +19,20 @@ section {
 	float: left;
 	margin-left: 50px;
 	margin-top: 40px;
+	position: relative;
 }
 .position {
-	height: 70px;
+	height: 60px;
 	width: 90%;
 	border-bottom: 1px solid #ccc;
 	margin-left: 40px;
 	position: relative;
-
+	margin-top: 50px;
 }
 .position span, .position a{
 	color: #ccc;
 	display: inline-block;
-	position: relative;
+	/*position: relative;*/
 	top: 30px;
 	float: left;
 	letter-spacing: 2px;
@@ -39,35 +40,50 @@ section {
 .position a:hover {
 	color: #ff9a00;
 }
-.content h2 {
-	font-size: 40px;
-	color: #000;
-	display: inline-block;
-	margin: 40px 40px 20px;
-}
-.content p {
-	display: inline-block;
-	font-size: 18px;
-	margin: 10px 50px;
-	line-height: 30px;
 
-}
-.content h3 {
+.content h1 {
+	width: 90%;
 	display: inline-block;
-	font-size: 22px;
-	margin: 10px 50px;
-	line-height: 30px;
+	height: 50px;
+	font-size: 34px;
+	font-weight: 600;
+	padding-left: 50px;
+	margin: 40px auto 20px 0;
+}
+.imgBox {
+	width: 100%;
+	height: 360px;
+	/*background-color: red;*/
+	position: relative;
+}
+.content img {
+	display: block;
+	width: 70%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -284px;
+}
+.content article{
+	width: 85%;
+	padding: 20px;
+	font-size: 20px;
+	margin: 30px 40px;
 }
 
-/*------------------------------文章内容-----------------------*/
+
+
+	 /*------------------------------文章内容-----------------------*/
 
 /*------------------------------侧边栏---------------------------*/
-aside {
+#asideBox {
 	height: 2200px;
 	width: 26%;
 	float: right;
 	margin-right: 50px;
 	margin-top: 40px;
+	position: relative;
 	/*background-color: skyblue;*/
 }
 /*-------------as-about----------*/
@@ -77,6 +93,7 @@ aside {
 	background-color: #fff;
 	border: 1px solid #f3f3f3;
 	margin-bottom: 20px;
+	position: absolute;
 }
 .photo-background {
 	height: 135px;
@@ -136,6 +153,7 @@ aside {
 	border: 1px solid #f3f3f3;
 	margin-bottom: 20px;
 	overflow: hidden;
+	position: absolute;
 }
 .as-photo img {
 	width: 100%;
@@ -154,6 +172,7 @@ aside {
 	background-color: #fff;
 	border: 1px solid #f3f3f3;
 	margin-bottom: 20px;
+	position: absolute;
 }
 .as-link p{
 	font-size: 20px;

@@ -20,11 +20,12 @@ public class ViewController {
 
     @RequestMapping("/")
     public String index(ModelMap model, HttpSession session) {
-
+        model.put("login_tag", false);
         if (session.getAttribute("username") != null) {
 //            Logger.getGlobal().info(session.getAttribute("username").toString());
             model.put("username", session.getAttribute("username"));
             session.removeAttribute("username");
+            model.put("login_tag", true);
         }
         return "index";
     }

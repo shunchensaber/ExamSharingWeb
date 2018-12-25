@@ -217,6 +217,7 @@ article{
 	white-space: nowrap;
 	vertical-align: baseline;
 	border-radius: .25em;
+	font-style: italic;
 }
 .inner-new header a  {
 	display: inline-block;
