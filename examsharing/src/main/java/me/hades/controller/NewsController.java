@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class NewsController {
 
-
+    private static int PAGE_SIZE = 10;
 
     @Autowired
     NewsRepository newsRepository;
@@ -36,16 +36,20 @@ public class NewsController {
         return "news";
     }
 
+    @RequestMapping("/news/list")
+    public String newsList(@RequestParam("page") Integer page, ModelMap model){
+
+        Pageable pageable = new PageRequest(page, PAGE_SIZE, Sort.Direction.DESC, "date");
+//        System.out.println(newsRepository.findAll(pageable).getContent());
+        model.put("newslist", newsRepository.findAll(pageable).getContent());
+        return "news-cet::newsfragment";
+    }
+
     @RequestMapping("/news-cet")
     public String news_cet(ModelMap model){
-        model.put("newslist", new LazyContextVariable<List<EduNews>>() {
-
-            @Override
-            protected List<EduNews> loadValue() {
-                return newsRepository.findAll(new Sort(Sort.Direction.DESC, "date"));
-            }
-        });
-
+        Pageable pageable = new PageRequest(0, PAGE_SIZE, Sort.Direction.DESC, "date");
+//        System.out.println(newsRepository.findAll(pageable).getContent());
+        model.put("newslist", newsRepository.findAll(pageable).getContent());
         return "news-cet";
     }
 

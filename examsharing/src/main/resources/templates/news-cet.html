@@ -70,8 +70,9 @@
             <!-- 四六级咨讯 -->
             <article>
                 <div id="cet-article-box">
-                    <div class="cet-article-box1" id="cet-article-box1">
-                        <ul >
+                    <div th:if="${newslist} != null" class="cet-article-box1" id="cet-article-box1"
+                    th:fragment="newsfragment">
+                        <ul>
                             <li th:each="news : ${newslist}">
                                 <div class="new">
                                     <div class="thumb-new">
@@ -102,10 +103,11 @@
 
                     </div>
                 </div>
-                <div class="news-button" >
+
+                <div class="news-button">
                     <span id="replace-more-button">加载更多</span>
                 </div>
-                </article>
+            </article>
         </section>
         <!-- 侧边栏 -->
         <aside>
@@ -149,7 +151,7 @@
                 <a href="">英语四级阅读如何拿高分</a>
             </div>
             <div class="as-photo"><img src="./image/news/photo2.jpg"></div>
-            <div class="as-link">
+            <div class="as-link" th:text="${pageCount}">
                 <p>网站推荐</p>
                 <a href="http://cet.etest.net.cn/ ">全国英语四六级考试官网</a>
                 <a href="https://yz.chsi.com.cn/">中国研究生招生信息网</a>
@@ -187,13 +189,20 @@
     </footer>
 </div>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#replace-more-button").click(function() {
-            $("#cet-article-box").css(
-                "height", function(index, value) {return parseFloat(value) * 1.5;}
-            );
-        });
+    var now_page = 1;   // [0 pageCount]
+
+    $("#replace-more-button").click(function () {
+        var url = './news/list';
+
+        $(".cet-article-box1").load(url,
+            {
+                page: now_page++
+            }
+        )
+
     });
+
+
 </script>
 </body>
 </html>
