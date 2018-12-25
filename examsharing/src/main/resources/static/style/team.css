@@ -3,7 +3,8 @@
 .banner {
 	height: 682px; /*原来是618px*/
 	width: 100%;
-	background: url(../image/team/bg.jpg) no-repeat;
+	background: url(../image/team/bg.jpg) no-repeat 0px 0px;
+	background-size: cover;
 	position: relative;
 }
 #about-us {
@@ -13,7 +14,7 @@
 	top: 50%;
 	left: 50%;
 	margin-top: -50px;
-	margin-left: -150px; 
+	margin-left: -150px;
 }
 #about-us hr {
 	border: 1px solid #fff;
@@ -45,25 +46,40 @@
 }
 .pre1, .pre2, .pre3 {
 	/*width: 630px;*/
-	width: 530px;
-	height: 354px;
+	/*width: 530px;*/
+	width: 41.27%;
+	min-height: 354px;
+	height: 57.28%;
 	border-radius: 40px;
 	margin: 132px auto;
 	overflow: hidden;
 	background-color: rgba(255,255,255,.1);
 }
+
 .pre1, .pre3{
 	margin-left: 50px;
 	float: left;
 }
+.pre1{
+	background: url("../image/team/tm-1.jpg") no-repeat 0px 0px;
+	background-size: cover;
+}
 .pre2 {
 	margin-right: 50px;
 	float: right;
+	background: url("../image/team/tm-2.jpg") no-repeat 0px 0px;
+	background-size: cover;
 }
-
+.pre3{
+	background: url("../image/team/tm-3.jpg") no-repeat 0px 0px;
+	background-size: cover;
+}
 .msg1, .msg2, .msg3 {
-	width: 600px;
-	height: 354px;
+	/*	width: 600px;
+        height: 354px;
+    */
+	width: 41.27%;
+	height: 57.28%;
 	margin: 132px auto;
 	overflow: hidden;
 	/*background-color: rgba(255,255,255,.1);*/
@@ -109,7 +125,8 @@
 	background-color: #1b0d59;
 }
 .contract-box1, .contract-box2 {
-	width: 560px;
+	/*width: 560px;*/
+	width: 43.61%;
 	height: 354px;
 	border-radius: 20px;
 	float: left;

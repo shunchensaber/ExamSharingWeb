@@ -6,7 +6,7 @@
 section {
 	width: 100%;
 	height: 700px;
-	background-color: #fff;     
+	background-color: #fff;
 	margin-top: 60px;
 }
 
@@ -108,17 +108,17 @@ aside {
 }
 .photo-wrapper .text-center img{
 	display: block;
-    vertical-align: middle;
-    position: absolute;
-    top: 10px;
-   /* max-width: 100%;
-    height: auto;*/
+	vertical-align: middle;
+	position: absolute;
+	top: 10px;
+	/* max-width: 100%;
+     height: auto;*/
 
-  }
+}
 .logo-name {
-  	height: 70px;
-  	width: 80px;
-  	margin-top: 14px;
+	height: 70px;
+	width: 80px;
+	margin-top: 14px;
 }
 .textwidget p {
 	color: #ccc;
@@ -166,7 +166,7 @@ aside {
 	margin-bottom: 10px;
 }
 .as-link a {
-	display: block; 
+	display: block;
 	height: 20px;
 	color: #ccc;
 	margin-left: 40px;
@@ -189,8 +189,8 @@ aside {
 /*------------------------------侧边栏---------------------------*/
 
 /*---------------------push----------------------*/
-.push, 
-#footer { 
-height: 60px; 
-clear:both; 
+.push,
+#footer {
+	height: 60px;
+	clear:both;
 } 

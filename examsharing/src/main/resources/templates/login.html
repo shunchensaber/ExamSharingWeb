@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -40,4 +41,49 @@
     </div>
 </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="content">
+        <div class="login">
+            <div class="logo">
+                <img src="./image/Smart2.png">
+                <img src="./image/logo2.png">
+            </div>
+            <form method="post" action="./login/check">
+                <div class="inputmsg">
+                    <div id="loginName">
+                        <img src="./image/login.png">
+                        <span>|</span>
+
+                        <input th:value="*{username != null}? *{username} : ''" type="text" name="username"
+                               id="username" placeholder="用户名" class="passwordInput">
+
+                    </div>
+                    <div id="loginPassword">
+                        <img src="./image/password.png">
+                        <span>|</span>
+                        <input type="password" name="password" id="password" placeholder="密码" class="passwordInput">
+                    </div>
+                    <p id="info_p" style="color:red;" th:if="${login_tag} != null" th:text="${msg}"/>
+                    <span id="forget"><a href="">忘记密码</a></span>
+                </div>
+                <input type="submit" name="登录" id="login" value="登录">
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+
 </html>
