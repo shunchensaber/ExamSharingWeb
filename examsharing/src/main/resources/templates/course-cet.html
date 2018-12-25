@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>四六级教程</title>
-	<link rel="stylesheet" href="./style/reset.css">  
-	<link rel="stylesheet" href="./style/main.css">
-	<link rel="stylesheet" href="./style/course-cet.css">
-	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="./js/course-cet.js"></script>
+	<link rel="stylesheet" th:href="@{/style/reset.css}">  
+	<link rel="stylesheet" th:href="@{/style/main.css}">
+	<link rel="stylesheet" th:href="@{/style/course-cet.css}">
+	<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
+	<script type="text/javascript" th:src="@{/js/course-cet.js}"></script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -16,28 +16,24 @@
 			<div id="page-nav"><!-- 导航栏 -->
 				<nav>
 					<div class="logo"><a href="#">
-						<img src="./image/Smart2.png">
-						<img src="./image/logo2.png" > 
+						<img th:src="@{/image/Smart2.png}">
+						<img th:src="@{/image/logo2.png}" > 
 						<!-- 酷享 --></a></div>
 					<ul class="navbar-button">
-						<li><a href="./login">登录</a></li>
-						<li><a href="./register">注册</a></li>
+						<li><a th:href="@{/login}">登录</a></li>
+						<li><a th:href="@{/register}">注册</a></li>
 					</ul>
 					<ul class="navbar-list">
 						<li class="parentLi"><a href="/" class="active">首页</a></li>
-						<li class="parentLi"><a href="./news">咨讯</a>
+						<li class="parentLi"><a th:href="@{/news-cet}">咨讯</a>
+						</li>
+						<li class="parentLi"><a th:href="@{/course}">教程</a>
 							<ul>
-								<li><a href="./news-exam">考研咨讯</a> </li>
-								<li><a href="./news-cet">四六级咨讯</a> </li>
+								<li><a th:href="@{/course-exam}">考研教程</a> </li>
+								<li><a th:href="@{/course-cet}">四六级教程</a> </li>
 							</ul>
 						</li>
-						<li class="parentLi"><a href="./course">教程</a>
-							<ul>
-								<li><a href="./course-exam">考研教程</a> </li>
-								<li><a href="./course-cet">四六级教程</a> </li>
-							</ul>
-						</li>
-						<li class="parentLi"><a href="./team">关于我们</a></li>
+						<li class="parentLi"><a th:href="@{/team}">关于我们</a></li>
 					</ul>
 					
 				</nav>
@@ -69,7 +65,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -87,7 +83,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -105,7 +101,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -125,7 +121,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -143,7 +139,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -161,7 +157,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -181,7 +177,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -199,7 +195,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -217,7 +213,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -241,7 +237,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -259,7 +255,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -277,7 +273,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -297,7 +293,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -315,7 +311,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -333,7 +329,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -353,7 +349,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -371,7 +367,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -389,7 +385,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -414,7 +410,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -432,7 +428,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -450,7 +446,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -470,7 +466,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -488,7 +484,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -506,7 +502,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -526,7 +522,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -544,7 +540,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -562,7 +558,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -587,7 +583,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -605,7 +601,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -623,7 +619,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -643,7 +639,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -661,7 +657,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -679,7 +675,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -699,7 +695,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -717,7 +713,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -735,7 +731,7 @@
 									<div class="teacher">
 										<div class="teacher-msg">
 											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
+												<img th:src="@{/image/index/teacher1.png}">
 												<span class="teacher-name">奇文</span>
 											</div>
 										</div>
@@ -767,7 +763,7 @@
 					<div class="footer-link">
 						<ul>
 							<li><a href="/">网站首页</a></li>
-							<li><a href="./team">关于我们</a></li>
+							<li><a th:href="@{/team}">关于我们</a></li>
 							<li><a href="#">联系我们</a></li>
 							<li><a href="#">意见反馈</a></li>
 							<li><a href="#">友情链接</a></li>
@@ -782,7 +778,7 @@
 			</div>
 		</footer>
 	</div>
-	<script type="text/javascript" src="./js/background.js"></script>
+	<script type="text/javascript" th:src="@{/js/background.js}"></script>
 	<canvas id="c_n5" width="1301" height="150" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;"></canvas>
 </body>
 </html>

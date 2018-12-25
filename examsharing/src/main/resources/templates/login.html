@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" th:href="@{/style/reset.css}">
+    <link rel="stylesheet" th:href="@{/style/main.css}">
+    <link rel="stylesheet" th:href="@{/style/login.css}">
 </head>
 <body>
 <div class="main-wrapper">
     <div class="content">
         <div class="login">
             <div class="logo">
-                <img src="./image/Smart2.png">
-                <img src="./image/logo2.png">
+                <img th:src="@{/image/Smart2.png}">
+                <img th:src="@{/image/logo2.png}">
             </div>
             <form method="post" action="./login/check">
                 <div class="inputmsg">
                     <div id="loginName">
-                        <img src="./image/login.png">
+                        <img th:src="@{/image/login.png}">
                         <span>|</span>
 
                         <input th:value="*{username != null}? *{username} : ''" type="text" name="username"
@@ -26,7 +26,7 @@
 
                     </div>
                     <div id="loginPassword">
-                        <img src="./image/password.png">
+                        <img th:src="@{/image/password.png}">
                         <span>|</span>
                         <input type="password" name="password" id="password" placeholder="密码" class="passwordInput">
                     </div>

@@ -4,12 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>首页</title>
-	<link rel="stylesheet" href="./style/reset.css">
-	<link rel="stylesheet" href="./style/main.css">
-	<link rel="stylesheet" href="./style/index.css">
-	<link rel="stylesheet" href="./style/animate.css">
-	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="./js/index.js"></script>
+	<link rel="stylesheet" th:href="@{/style/reset.css}">
+	<link rel="stylesheet" th:href="@{/style/main.css}">
+	<link rel="stylesheet" th:href="@{/style/index.css}">
+	<link rel="stylesheet" th:href="@{/style/animate.css}">
+	<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
+	<script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -22,28 +22,23 @@
 			<div id="page-nav"><!-- 导航栏 -->
 				<nav>
 					<div class="logo"><a href="#">
-						<img src="./image/Smart2.png">
-						<img src="./image/logo2.png" > 
+						<img th:src="@{/image/Smart2.png}">
+						<img th:src="@{/image/logo2.png}" > 
 						<!-- 酷享 --></a></div>
 					<ul class="navbar-button">
 						<li><a href="/login">登录</a></li>
-						<li><a href="./register">注册</a></li>
+						<li><a th:href="@{/register}">注册</a></li>
 					</ul>
 					<ul class="navbar-list">
 						<li class="parentLi"><a href="/" class="active">首页</a></li>
-						<li class="parentLi"><a href="./news">咨讯</a>
+						<li class="parentLi"><a th:href="@{/news-cet}">咨讯</a></li>
+						<li class="parentLi"><a th:href="@{/course}">教程</a>
 							<ul>
-								<li><a href="./news-exam">考研咨讯</a> </li>
-								<li><a href="./news-cet">四六级咨讯</a> </li>
+								<li><a th:href="@{/course-exam}">考研教程</a> </li>
+								<li><a th:href="@{/course-cet}">四六级教程</a> </li>
 							</ul>
 						</li>
-						<li class="parentLi"><a href="./course">教程</a>
-							<ul>
-								<li><a href="./course-exam">考研教程</a> </li>
-								<li><a href="./course-cet">四六级教程</a> </li>
-							</ul>
-						</li>
-						<li class="parentLi"><a href="./team">关于我们</a></li>
+						<li class="parentLi"><a th:href="@{/team}">关于我们</a></li>
 					</ul>
 					
 				</nav>
@@ -52,13 +47,13 @@
 				<div id="home-aside">
 					<div id="container">
 						<div id="list" style ="left: -500px">
-							<img src="./image/index/list5.jpg" alt="5">
-							<img src="./image/index/list1.jpg" alt="1">
-							<img src="./image/index/list2.jpg" alt="2">
-							<img src="./image/index/list3.png" alt="3">
-							<img src="./image/index/list4.jpg" alt="4">
-							<img src="./image/index/list5.jpg" alt="5">
-							<img src="./image/index/list1.jpg" alt="1">
+							<img th:src="@{/image/index/list5.jpg}" alt="5">
+							<img th:src="@{/image/index/list1.jpg}" alt="1">
+							<img th:src="@{/image/index/list2.jpg}" alt="2">
+							<img th:src="@{/image/index/list3.png}" alt="3">
+							<img th:src="@{/image/index/list4.jpg}" alt="4">
+							<img th:src="@{/image/index/list5.jpg}" alt="5">
+							<img th:src="@{/image/index/list1.jpg}" alt="1">
 						</div>
 						<div id="button">
 							<span index="1" class="on"></span>
@@ -74,7 +69,7 @@
 				<!-- 向下箭头 -->
 				<div id="more">
 					<div>
-						<img src="./image/index/more.png" width="32px;">
+						<img th:src="@{/image/index/more.png}" width="32px;">
 					</div>
 				</div>
 			</div>
@@ -94,7 +89,7 @@
 						<div class="teacher">
 							<div class="teacher-msg">
 								<div class="teacher-num1">
-									<img src="./image/index/teacher1.png">
+									<img th:src="@{/image/index/teacher1.png}">
 									<span class="teacher-name">奇文</span>
 								</div>
 							</div>
@@ -112,7 +107,7 @@
 						<div class="teacher">
 							<div class="teacher-msg">
 								<div class="teacher-num1">
-									<img src="./image/index/teacher1.png">
+									<img th:src="@{/image/index/teacher1.png}">
 									<span class="teacher-name">奇文</span>
 								</div>
 							</div>
@@ -130,7 +125,7 @@
 						<div class="teacher">
 							<div class="teacher-msg">
 								<div class="teacher-num1">
-									<img src="./image/index/teacher1.png">
+									<img th:src="@{/image/index/teacher1.png}">
 									<span class="teacher-name">奇文</span>
 								</div>
 							</div>
@@ -148,7 +143,7 @@
 						<div class="teacher">
 							<div class="teacher-msg">
 								<div class="teacher-num1">
-									<img src="./image/index/teacher1.png">
+									<img th:src="@{/image/index/teacher1.png}">
 									<span class="teacher-name">奇文</span>
 								</div>
 							</div>
@@ -190,12 +185,12 @@
 						<div class="box1"></div>
 						<div  id="boxShow1" class="box2">
 							<div>
-								<img src="./image/index/ic-star1.png">
+								<img th:src="@{/image/index/ic-star1.png}">
 							</div>
 							<div  id="skuShow1" class="skuShow" >
 								<p id="p-cet6">六级</p>
-								<span class="span-course"><a href="./course-cet">六级教程</a></span>
-								<span class="span-news"><a href="./news-cet">六级资讯</a></span>
+								<span class="span-course"><a th:href="@{/course-cet}">六级教程</a></span>
+								<span class="span-news"><a th:href="@{/news-cet}">六级资讯</a></span>
 							</div>
 						</div>
 						<div class="box3"></div>
@@ -203,23 +198,23 @@
 					<div class="ad-main2">
 						<div id="boxShow2" class="box1">
 							<div>
-								<img src="./image/index/ic-write1.png">
+								<img th:src="@{/image/index/ic-write1.png}">
 							</div>
 							<div id="skuShow2" class="skuShow">
 								<p>四级</p>
-								<span class="span-course"><a href="./course-cet">四级教程</a></span>
-								<span class="span-news"><a href="./news-cet">四级资讯</a></span>
+								<span class="span-course"><a th:href="@{/course-cet}">四级教程</a></span>
+								<span class="span-news"><a th:href="@{/news-cet}">四级资讯</a></span>
 							</div>
 						</div>
 						<div class="box2"></div>
 						<div id="boxShow3" class="box3">
 							<div>
-								<img src="./image/index/ic-study1.png">
+								<img th:src="@{/image/index/ic-study1.png}">
 							</div>
 							<div id="skuShow3" class="skuShow">
 								<p>考研</p>
-								<span class="span-course"><a href="./course-exam">考研教程</a></span>
-								<span class="span-news"><a href="./news-exam">考研资讯</a></span>
+								<span class="span-course"><a th:href="@{/course-exam}">考研教程</a></span>
+								<span class="span-news"><a th:href="@{/news-exam}">考研资讯</a></span>
 							</div>
 						</div>
 					</div>
@@ -234,7 +229,7 @@
 					<div class="footer-link">
 						<ul>
 							<li><a href="/">网站首页</a></li>
-							<li><a href="./team">关于我们</a></li>
+							<li><a th:href="@{/team}">关于我们</a></li>
 							<li><a href="#">联系我们</a></li>
 							<li><a href="#">意见反馈</a></li>
 							<li><a href="#">友情链接</a></li>

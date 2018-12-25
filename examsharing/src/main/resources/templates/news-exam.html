@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>考研咨讯</title>
-	<link rel="stylesheet" href="./style/reset.css">
-	<link rel="stylesheet" href="./style/main.css">
-	<link rel="stylesheet" href="./style/news-exam.css">
-	<script type="text/javascript" src="./js/news.js"></script>
-	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="./js/news-exam.js"></script>
+	<link rel="stylesheet" th:href="@{/style/reset.css}">
+	<link rel="stylesheet" th:href="@{/style/main.css}">
+	<link rel="stylesheet" th:href="@{/style/news-exam.css}">
+	<script type="text/javascript" th:src="@{/js/news.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
+	<script type="text/javascript" th:src="@{/js/news-exam.js}"></script>
 </head>
 <body>
 <div class="main-wrapper">
@@ -17,28 +17,28 @@
 			<div id="page-nav"><!-- 导航栏 -->
 				<nav>
 					<div class="logo"><a href="#">
-						<img src="./image/Smart2.png">
-						<img src="./image/logo2.png" > 
+						<img th:src="@{/image/Smart2.png}">
+						<img th:src="@{/image/logo2.png}" > 
 						<!-- 酷享 --></a></div>
 					<ul class="navbar-button">
-						<li><a href="./login">登录</a></li>
-						<li><a href="./register">注册</a></li>
+						<li><a th:href="@{/login}">登录</a></li>
+						<li><a th:href="@{/register}">注册</a></li>
 					</ul>
 					<ul class="navbar-list">
 						<li class="parentLi"><a href="/" class="active">首页</a></li>
-						<li class="parentLi"><a href="./news">咨讯</a>
+						<li class="parentLi"><a th:href="@{/news}">咨讯</a>
 							<ul>
-								<li><a href="./news-exam">考研咨讯</a> </li>
-								<li><a href="./news-cet">四六级咨讯</a> </li>
+								<li><a th:href="@{/news-exam}">考研咨讯</a> </li>
+								<li><a th:href="@{/news-cet}">四六级咨讯</a> </li>
 							</ul>
 						</li>
-						<li class="parentLi"><a href="./course">教程</a>
+						<li class="parentLi"><a th:href="@{/course}">教程</a>
 							<ul>
-								<li><a href="./course-exam">考研教程</a> </li>
-								<li><a href="./course-cet">四六级教程</a> </li>
+								<li><a th:href="@{/course-exam}">考研教程</a> </li>
+								<li><a th:href="@{/course-cet}">四六级教程</a> </li>
 							</ul>
 						</li>
-						<li class="parentLi"><a href="./team">关于我们</a></li>
+						<li class="parentLi"><a th:href="@{/team}">关于我们</a></li>
 					</ul>	
 				</nav>
 			</div>	
@@ -46,12 +46,12 @@
 			<div id="home-banner">  
 					<div id="container">
 						<div id="list" style ="left: -1180px">
-							<img src="./image/news/exam2.png" alt="4">
-							<img src="./image/news/new1.png" alt="1">
-							<img src="./image/news/exam1.png" alt="2">
-							<img src="./image/news/new2.png" alt="3">
-							<img src="./image/news/exam2.png" alt="4">
-							<img src="./image/news/new1.png" alt="1">
+							<img th:src="@{/image/news/exam2.png}" alt="4">
+							<img th:src="@{/image/news/new1.png}" alt="1">
+							<img th:src="@{/image/news/exam1.png}" alt="2">
+							<img th:src="@{/image/news/new2.png}" alt="3">
+							<img th:src="@{/image/news/exam2.png}" alt="4">
+							<img th:src="@{/image/news/new1.png}" alt="1">
 						</div>
 						<div id="button">
 							<span index="1" class="on"></span>
@@ -74,7 +74,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -98,7 +98,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -122,7 +122,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -146,7 +146,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -170,7 +170,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -194,7 +194,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -218,7 +218,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -242,7 +242,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -268,7 +268,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -292,7 +292,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -316,7 +316,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -340,7 +340,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -364,7 +364,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -388,7 +388,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -412,7 +412,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -436,7 +436,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -462,7 +462,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -486,7 +486,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -510,7 +510,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -534,7 +534,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -558,7 +558,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -582,7 +582,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -606,7 +606,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -630,7 +630,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -656,7 +656,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -680,7 +680,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -704,7 +704,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -728,7 +728,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -752,7 +752,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -776,7 +776,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -800,7 +800,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -824,7 +824,7 @@
 							<div class="new">
 								<div class="thumb-new">
 									<a href="">
-										<img src="./image/news/inner.jpg">
+										<img th:src="@{/image/news/inner.jpg}">
 									</a>
 								</div>
 								<div class="inner-new">
@@ -863,13 +863,13 @@
 			<aside>
 				<div class="as-about">
 					<div class="photo-background">
-						<img src="./image/news/ad-about.jpg">
+						<img th:src="@{/image/news/ad-about.jpg}">
 					</div>
 					<div class="photo-wrapper">
 						<div class="text-center">
 							<a href="">
-								<img src="./image/Smart2.png">
-								<img src="./image/logo3.png" class="logo-name">
+								<img th:src="@{/image/Smart2.png}">
+								<img th:src="@{/image/logo3.png}" class="logo-name">
 							</a>
 						</div>
 					</div>
@@ -888,7 +888,7 @@
 					<a href="">备考要注意的细节</a>
 					<a href="">备考要注意的细节</a>
 				</div>
-				<div class="as-photo"><img src="./image/news/photo1.jpg"></div>
+				<div class="as-photo"><img th:src="@{/image/news/photo1.jpg}"></div>
 				<div class="as-link as-rank">
 					<p>点击排行</p>
 					<a href="">备考要注意的细节</a>
@@ -900,7 +900,7 @@
 					<a href="">备考要注意的细节</a>
 					<a href="">备考要注意的细节</a>
 				</div>
-				<div class="as-photo"><img src="./image/news/photo2.jpg"></div>
+				<div class="as-photo"><img th:src="@{/image/news/photo2.jpg}"></div>
 				<div class="as-link">
 					<p>网站推荐</p>
 					<a href="http://cet.etest.net.cn/ ">全国英语四六级考试官网</a>
@@ -912,7 +912,7 @@
 					<a href="http://cet46.wendu.com">文都教育</a>
 					<a href="http://www.wantiku.com/">大学万题库</a>
 				</div>
-				<div class="as-photo"><img src="./image/news/photo3.jpg"></div>
+				<div class="as-photo"><img th:src="@{/image/news/photo3.jpg}"></div>
 			</aside>
 		</div>	
 		<!-- 页脚 -->
@@ -923,7 +923,7 @@
 					<div class="footer-link">
 						<ul>
 							<li><a href="/">网站首页</a></li>
-							<li><a href="./team">关于我们</a></li>
+							<li><a th:href="@{/team}">关于我们</a></li>
 							<li><a href="#">联系我们</a></li>
 							<li><a href="#">意见反馈</a></li>
 							<li><a href="#">友情链接</a></li>

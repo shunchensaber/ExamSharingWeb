@@ -51,7 +51,7 @@ public class UserController {
         }
         // 只要不是正确登录，就都是失败
         session.setAttribute("login_tag", false);
-        return "redirect:/login";
+        return "redirect:login";
 
 
     }

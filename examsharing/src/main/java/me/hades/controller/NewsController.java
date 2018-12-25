@@ -22,7 +22,6 @@ import java.util.Map;
  * 资讯控制类
  */
 @Controller
-
 public class NewsController {
 
     private static int PAGE_SIZE = 10;
@@ -30,9 +29,10 @@ public class NewsController {
     @Autowired
     NewsRepository newsRepository;
 
-    @RequestMapping("/news")
-    public String news(Map<String, Object> model){
-
+    @RequestMapping("/news/{id}")
+    public String news(@PathVariable("id") Integer id,
+            ModelMap model){
+        model.put("news", newsRepository.findEduNewsById(id) );
         return "news";
     }
 

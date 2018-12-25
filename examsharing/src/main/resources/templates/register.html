@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>注册</title>
-	<link rel="stylesheet" href="./style/reset.css">
-	<link rel="stylesheet" href="./style/main.css">
-	<link rel="stylesheet" href="./style/register.css">
+	<link rel="stylesheet" th:href="@{/style/reset.css}">
+	<link rel="stylesheet" th:href="@{/style/main.css}">
+	<link rel="stylesheet" th:href="@{/style/register.css}">
 </head>
 <body>
 	<div class="main-wrapper">
 		<div class="content">
 			<div class="register">
 				<div class="logo">
-					<img src="./image/Smart2.png">
-					<img src="./image/logo2.png" > 
+					<img th:src="@{/image/Smart2.png}">
+					<img th:src="@{/image/logo2.png}" > 
 				</div>
 				<div class="inputmsg">
 					<div id="userName">
