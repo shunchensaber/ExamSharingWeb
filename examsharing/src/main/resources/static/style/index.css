@@ -64,15 +64,19 @@ body {
 	right: 80px;
 	border-radius: 15%;
 }
+
+
 #container {
 	/*width: 500px;*/
 	width: 100%;
 	min-height: 400px;
 	overflow: hidden;
 	border-radius: 15%;
-	position: absolute;  /*这里的定位为绝对定位absolute或者相对定位relative都可以，就是必须要设置*/
+	position: absolute; /*这里的定位为绝对定位absolute或者相对定位relative都可以，就是必须要设置*/
 	z-index: 1;
 }
+
+
 #list {
 	margin: 0;
 	padding: 0;
@@ -81,6 +85,7 @@ body {
 	position: absolute;
 	z-index: 2;
 }
+
 #button {
 	z-index: 3;
 	height: 10px;

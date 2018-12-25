@@ -1,1576 +1,791 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>四六级教程</title>
-	<link rel="stylesheet" th:href="@{/style/reset.css}">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<link rel="stylesheet" th:href="@{/style/reset.css}">
 	<link rel="stylesheet" th:href="@{/style/main.css}">
 	<link rel="stylesheet" th:href="@{/style/course-cet.css}">
 	<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
 	<script type="text/javascript" th:src="@{/js/course-cet.js}"></script>
 </head>
 <body>
-	<div class="main-wrapper">
-		<!-- 页头 -->
-		<header id = "head"><!-- 页头的开始 -->
-			<div id="page-nav"><!-- 导航栏 -->
-				<nav>
-					<div class="logo"><a href="#">
-						<img th:src="@{/image/Smart2.png}">
-						<img th:src="@{/image/logo2.png}" > 
-						<!-- 酷享 --></a></div>
-					<ul class="navbar-button">
-						<li><a th:href="@{/login}">登录</a></li>
-						<li><a th:href="@{/register}">注册</a></li>
-					</ul>
-					<ul class="navbar-list">
-						<li class="parentLi"><a href="/" class="active">首页</a></li>
-						<li class="parentLi"><a th:href="@{/news-cet}">咨讯</a>
-						</li>
-						<li class="parentLi"><a th:href="@{/course}">教程</a>
-							<ul>
-								<li><a th:href="@{/course-exam}">考研教程</a> </li>
-								<li><a th:href="@{/course-cet}">四六级教程</a> </li>
-							</ul>
-						</li>
-						<li class="parentLi"><a th:href="@{/team}">关于我们</a></li>
-					</ul>
-					
-				</nav>
-			</div>	
-		</header><!-- 页头结束 -->
-		<!-- 页面内容 -->
-		<section>
-			<!-- 四六级教程展示 -->
-			<div class="cet">
-				<!-- 文字导航 -->
-				<div class="cet1">
-					<div class="cet1-box">
-						<hr class="hr-left">
-						<div class="cet-word">四六级所有教程</div>
-						<hr class="hr-right">
-					</div>
-				</div>
-				<!-- 块窗口展示教程 -->
-				<div class="window" id="cet-window">
-					<div class="window1"  id="cet-window1">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="window2"  id="cet-window2">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<div class="window3"  id="cet-window3">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<div class="window4"  id="cet-window4">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img th:src="@{/image/index/teacher1.png}">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div> 
-				</div>
-				<!-- 更多选择小标点 -->
-				<div class="cet3">
-					<div class="cet3-button" id="cet-button">
-						<span id="cet-button1">1</span>
-						<span id="cet-button2">2</span>
-						<span id="cet-button3">3</span>
-						<span id="cet-button4">4</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- 页脚 -->
-		<footer>
-			<div class="footer-map">
-				<div class="footer-inner">
-					<div class="footer-link">
+<div class="main-wrapper">
+	<!-- 页头 -->
+	<header id = "head"><!-- 页头的开始 -->
+		<div id="page-nav"><!-- 导航栏 -->
+			<nav>
+				<div class="logo"><a href="#">
+					<img th:src="@{/image/Smart2.png}">
+					<img th:src="@{/image/logo2.png}" >
+					<!-- 酷享 --></a></div>
+				<ul class="navbar-button">
+					<li><a th:href="@{/login}">登录</a></li>
+					<li><a th:href="@{/register}">注册</a></li>
+				</ul>
+				<ul class="navbar-list">
+					<li class="parentLi"><a href="/" class="active">首页</a></li>
+					<li class="parentLi"><a th:href="@{/news}">咨讯</a>
+						<!--<ul>-->
+							<!--<li><a th:href="@{/news-exam}">考研咨讯</a> </li>-->
+							<!--<li><a th:href="@{/news-cet}">四六级咨讯</a> </li>-->
+						<!--</ul>-->
+					</li>
+					<li class="parentLi"><a th:href="@{/course}">教程</a>
 						<ul>
-							<li><a href="/">网站首页</a></li>
-							<li><a th:href="@{/team}">关于我们</a></li>
-							<li><a href="#">联系我们</a></li>
-							<li><a href="#">意见反馈</a></li>
-							<li><a href="#">友情链接</a></li>
+							<li><a th:href="@{/course-exam}">考研教程</a> </li>
+							<li><a th:href="@{/course-cet}">四六级教程</a> </li>
 						</ul>
+					</li>
+					<li class="parentLi"><a th:href="@{/team}">关于我们</a></li>
+				</ul>
+
+			</nav>
+		</div>
+	</header><!-- 页头结束 -->
+	<!-- 页面内容 -->
+	<section>
+		<!-- 四六级教程展示 -->
+		<div class="cet">
+			<!-- 文字导航 -->
+			<div class="cet1">
+				<div class="cet1-box">
+					<hr class="hr-left">
+					<div class="cet-word">四六级所有教程</div>
+					<hr class="hr-right">
+				</div>
+			</div>
+			<!-- 块窗口展示教程 -->
+			<div class="window" id="cet-window">
+				<div class="window1"  id="cet-window1">
+					<div class="cet2">
+						<div class="cet2-1">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-2">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-3">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">4招告别单词四记硬背</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
 					</div>
-					<div class="footer-chat">
-						<a href="#"><img src="image/footer_weibo.png"></a>
-						<a href="#"><img src="image/footer_wechat.png"></a>
-						<a href="#"><img src="image/footer_trace.png"></a>
+				</div>
+				<div class="window2"  id="cet-window2">
+					<div class="cet2">
+						<div class="cet2-1">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-2">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-3">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">吃透听力，"听懂"四六级</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="window3"  id="cet-window3">
+					<div class="cet2">
+						<div class="cet2-1">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-2">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-3">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">大学英语进阶6500词</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="window4"  id="cet-window4">
+					<div class="cet2">
+						<div class="cet2-1">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-2">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+						<div class="cet2-3">
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+							<a href="" class="m-course">
+								<span class="classify" >四六级</span>
+								<h1 class="tit">四六级备考必读</h1>
+								<div class="time">
+									时间：2018.12.08 21:00<ins>|</ins>1课时
+								</div>
+								<div class="teacher">
+									<div class="teacher-msg">
+										<div class="teacher-num1">
+											<img th:src="@{/image/index/teacher1.png}">
+											<span class="teacher-name">奇文</span>
+										</div>
+									</div>
+								</div>
+								<div class="about-more">
+									<span>更多详情</span>
+								</div>
+							</a>
+						</div>
+
 					</div>
 				</div>
 			</div>
-		</footer>
-	</div>
-	<script type="text/javascript" th:src="@{/js/background.js}"></script>
-	<canvas id="c_n5" width="1301" height="150" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;"></canvas>
+			<!-- 更多选择小标点 -->
+			<div class="cet3">
+				<div class="cet3-button" id="cet-button">
+					<span id="cet-button1">1</span>
+					<span id="cet-button2">2</span>
+					<span id="cet-button3">3</span>
+					<span id="cet-button4">4</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 页脚 -->
+	<footer>
+		<div class="footer-map">
+			<div class="footer-inner">
+				<div class="footer-link">
+					<ul>
+						<li><a href="/">网站首页</a></li>
+						<li><a th:href="@{/team}">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">意见反馈</a></li>
+						<li><a href="#">友情链接</a></li>
+					</ul>
+				</div>
+				<div class="footer-chat">
+					<a href="#"><img src="image/footer_weibo.png"></a>
+					<a href="#"><img src="image/footer_wechat.png"></a>
+					<a href="#"><img src="image/footer_trace.png"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" th:src="@{/js/background.js}"></script>
+<i/>
+<!--<canvas id="c_n5" width="1301" height="150" style="position: fixed; top: 0px; left: 0px; z-index: -3; opacity: 1;"></canvas>-->
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>四六级教程</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<link rel="stylesheet" th:href="@{/style/reset.css}">  
-	<link rel="stylesheet" th:href="@{/style/main.css}">
-	<link rel="stylesheet" th:href="@{/style/course-cet.css}">
-	<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}th:"></script>
-	<script type="text/javascript" th:src="@{/js/course-cet.js}"></script>
-</head>
-<body>
-	<div class="main-wrapper">
-		<!-- 页头 -->
-		<header id = "head"><!-- 页头的开始 -->
-			<div id="page-nav"><!-- 导航栏 -->
-				<nav>
-					<div class="logo"><a href="#">
-						<img th:src="@{/image/Smart2.png}">
-						<img th:src="@{/image/logo2.png}" > 
-						<!-- 酷享 --></a></div>
-					<ul class="navbar-button">
-						<li><a href="./login">登录</a></li>
-						<li><a href="./register">注册</a></li>
-					</ul>
-					<ul class="navbar-list">
-						<li class="parentLi"><a href="/" class="active">首页</a></li>
-						<li class="parentLi"><a href="./news">咨讯</a>
-							<ul>
-								<li><a href="./news-exam">考研咨讯</a> </li>
-								<li><a href="./news-cet">四六级咨讯</a> </li>
-							</ul>
-						</li>
-						<li class="parentLi"><a href="./course">教程</a>
-							<ul>
-								<li><a href="./course-exam">考研教程</a> </li>
-								<li><a href="./course-cet">四六级教程</a> </li>
-							</ul>
-						</li>
-						<li class="parentLi"><a href="./team">关于我们</a></li>
-					</ul>
-					
-				</nav>
-			</div>	
-		</header><!-- 页头结束 -->
-		<!-- 页面内容 -->
-		<section>
-			<!-- 四六级教程展示 -->
-			<div class="cet">
-				<!-- 文字导航 -->
-				<div class="cet1">
-					<div class="cet1-box">
-						<hr class="hr-left">
-						<div class="cet-word">四六级所有教程</div>
-						<hr class="hr-right">
-					</div>
-				</div>
-				<!-- 块窗口展示教程 -->
-				<div class="window" id="cet-window">
-					<div class="window1"  id="cet-window1">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">4招告别单词四记硬背</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="window2"  id="cet-window2">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">吃透听力，"听懂"四六级</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<div class="window3"  id="cet-window3">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">大学英语进阶6500词</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<div class="window4"  id="cet-window4">
-						<div class="cet2">
-							<div class="cet2-1">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-2">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-							<div class="cet2-3">
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-								<a href="" class="m-course">
-									<span class="classify" >四六级</span>
-									<h1 class="tit">四六级备考必读</h1>
-									<div class="time">
-										时间：2018.12.08 21:00<ins>|</ins>1课时
-									</div>
-									<div class="teacher">
-										<div class="teacher-msg">
-											<div class="teacher-num1">
-												<img src="./image/index/teacher1.png">
-												<span class="teacher-name">奇文</span>
-											</div>
-										</div>
-									</div>
-									<div class="about-more">
-										<span>更多详情</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-					</div> 
-				</div>
-				<!-- 更多选择小标点 -->
-				<div class="cet3">
-					<div class="cet3-button" id="cet-button">
-						<span id="cet-button1">1</span>
-						<span id="cet-button2">2</span>
-						<span id="cet-button3">3</span>
-						<span id="cet-button4">4</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- 页脚 -->
-		<footer>
-			<div class="footer-map">
-				<div class="footer-inner">
-					<div class="footer-link">
-						<ul>
-							<li><a href="/">网站首页</a></li>
-							<li><a href="./team">关于我们</a></li>
-							<li><a href="#">联系我们</a></li>
-							<li><a href="#">意见反馈</a></li>
-							<li><a href="#">友情链接</a></li>
-						</ul>
-					</div>
-					<div class="footer-chat">
-						<a href="#"><img src="image/footer_weibo.png"></a>
-						<a href="#"><img src="image/footer_wechat.png"></a>
-						<a href="#"><img src="image/footer_trace.png"></a>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script type="text/javascript" src="./js/background.js"></script>
-	<canvas id="c_n5" width="1301" height="150" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 1;"></canvas>
-</body>
-</html>
-

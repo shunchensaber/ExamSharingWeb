@@ -3,6 +3,7 @@ window.onload = function(){
 	photoAnimate();
 	moreAnimate();
 	// addAmimate();
+    onmouseUserlogo();
 }
 // ------------------------------ 图片轮播开始----------------------
  function photoAnimate(){  //图片轮播函数
@@ -166,3 +167,20 @@ window.onload = function(){
  		 $('span').removeClass('animated pulse');
  	}
 // -------------iv刚出现div里面的内容进入效果--------
+
+//个人详情页
+
+	function onmouseUserlogo(){
+		$("#userimg-box").mouseover(function(){
+			$("#userDiv").css("opacity","1");
+		});
+		$("#userDiv").mouseover(function(){
+			$("#userDiv").css("opacity","1");
+		});
+		$("#userimg-box").mouseout(function(){
+			$("#userDiv").css("opacity","0");
+		});
+		$("#userDiv").mouseout(function(){
+			$("#userDiv").css("opacity","0");
+		});
+	}

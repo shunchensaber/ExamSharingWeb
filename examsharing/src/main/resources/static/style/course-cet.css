@@ -7,7 +7,7 @@ body {
 .cet {
 	width: 100%;
 	background: rgba(204,204,204,.2);
-	z-index: -1;
+	z-index: -3;
 }
 /*---------------------------------所有课程---------------------*/
 .cet1 {
@@ -25,7 +25,7 @@ body {
 }
 .cet hr{
 	width: 30%;
-	height: 70%；
+	/*height: 70%;*/
 
 }
 .hr-left {

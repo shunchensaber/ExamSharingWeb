@@ -168,98 +168,35 @@ nav ul li:hover ul {
 
 
 /*---------------------------------个人详情页-----------------------*/
-#userdiv {
-	width: 300px;
-	height: 250px;
-	background-color: rgba(204,204,204,.4);
+#userDiv {
+	width: 150px;
+	height: 192px;
+	background-color: #fff;
 	position: fixed;
-	right: 0;
 	top: 64px;
-	z-index: 999;
-	/*display: none;*/
+	right: 76px;
+	opacity: 0;
 }
-#userdiv div {
-	width: 100%;
-	height: 100px;
-	/*background-color: red;*/
-}
-#userdiv img {
-	display: inline-block;
-	width: 64px;
-	height: 64px;
-	overflow: hidden;
-	float: left;
-	margin-left: 22px;
-	margin-top: 18px;
-}
-#userdiv p {
-	font-size: 20px;
-	display: inline-block;
-	width: 100px;
-	height: 64px;
-	text-align: center;
-	line-height: 64px;
-	float: left;
-	margin-left: 26px;
-	margin-top: 18px;
-	color:#ff9a00;
-}
-
-
-.user-msg {
-	margin: 0 auto;
-	/*background-color: pink;*/
-}
-.user-msg ul {
+#userDiv ul,#userDiv li,#userDiv a{
 	display: block;
 	width: 100%;
-	height: 100%;
-	position: relative;
-
+	margin: 0;
+	padding: 0;
 }
-.user-msg li {
- 	background-color: rgba(255,154,0,.8);
- 
- /*	position: absolute;*/
-    display: inline-block;
-    width: 100px;
-    height: 36px;
- 	top : 20px;
- 	left : 20px;
- 	float: left;
- 	border-radius: 4px;
- 	margin: 0;
- 	margin-right:25px; 
- 	padding: 0;
+#userDiv li {
+	height: 33.33%;
 }
-.user-msg a {
-	font-size: 16px;
-	border-radius: 4px;
-	/*top: -20px;*/
-	position: absolute;
-	width: 100px;
-	height: 100%;
+#userDiv ul li a {
+	color: #ccc;
 	text-align: center;
-	line-height: 36px;
-	color: #fff;
+	cursor: pointer;
+}
+#userDiv ul li a:hover {
+	background-color: rgba(204,204,204,.4);
+	color: #ff9a00;
 }
 
-#userdiv .user-msg {
-	width: 86%;
-	margin: auto 20px;
-	height: 100px;
-	border-bottom: 1px solid #ccc
-}
 
-#userdiv span {
-	display: block;
-	margin-right: 26px;
-	margin-top: 10px;
-	color: #fff;
-	font-size: 16px;
-	float: right;
-	font-weight: 700;
-}
 /*----------------页脚footer---------------*/
 footer {
 	height: 120px;
