@@ -17,7 +17,7 @@ import java.util.Map;
  */
 @Controller
 public class CourseController {
-    
+
     @Autowired
     LoginTableRepository loginTableRepository;
 

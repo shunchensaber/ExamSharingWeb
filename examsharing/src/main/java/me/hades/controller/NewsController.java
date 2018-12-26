@@ -45,6 +45,8 @@ public class NewsController {
     @RequestMapping("/news/{id}")
     public String news(@PathVariable("id") Integer id,
                        ModelMap model) {
+        Pageable pageable = new PageRequest(0, PAGE_SIZE, Sort.Direction.DESC, "date");
+        model.put("newslist", newsRepository.findAll(pageable).getContent());
         model.put("news",newsRepository.findEduNewsById(id));
         return "news";
     }
@@ -53,7 +55,6 @@ public class NewsController {
     public String newsList(@RequestParam("page") Integer page, ModelMap model) {
 
         Pageable pageable = new PageRequest(page, PAGE_SIZE, Sort.Direction.DESC, "date");
-//        System.out.println(newsRepository.findAll(pageable).getContent());
         model.put("newslist", newsRepository.findAll(pageable).getContent());
         return "news-cet::newsfragment";
     }

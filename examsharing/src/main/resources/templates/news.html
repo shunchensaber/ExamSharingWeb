@@ -75,27 +75,15 @@
 					</div>
 				</div>
 				<div class="as-link as-article">
-					<p>最新文章</p>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
+					<ul th:each="news : ${newslist}">
+						<li ><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
+					</ul>
 				</div>
 				<div class="as-photo"><img th:src="@{/image/news/photo1.jpg}"></div>
 				<div class="as-link as-rank">
-					<p>点击排行</p>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
-					<a href="">备考要注意的细节</a>
+					<ul th:each="news : ${newslist}">
+						<li ><a th:href="@{'/news/'+${news.id}}" th:text="${news.title}"> </a></li>
+					</ul>
 				</div>
 				<div class="as-photo"><img th:src="@{/image/news/photo2.jpg}"></div>
 				<div class="as-link">
