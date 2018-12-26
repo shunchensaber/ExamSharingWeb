@@ -13,8 +13,7 @@ import java.util.Date;
 /**
  * Created by hades on 2018/12/24.
  */
-@Entity
-@Table(name = "edunews")
+@Entity(name = "edunews")
 public class EduNews{
 
     @Id
