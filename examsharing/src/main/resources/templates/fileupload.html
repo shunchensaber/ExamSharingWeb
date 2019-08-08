@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>上传文件</title>
+
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+        <!--引入Flat UI-->
+        <link href="/dist/css/flat-ui.css" rel="stylesheet">
+        <style>
+            .mynavbar {
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+    <!--导航条-->
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header mynavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand mynavbar" href="#">资料上传系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-3">
+            <ul class="nav navbar-nav mynavbar">
+                <li class="mynavbar active"><a href="/user/safe/showSaveArticle">增加文章</a></li>
+                <li class="mynavbar"><a href="/user/safe/showUpdateArticle">文章修改</a></li>
+                <li class="mynavbar"><a href="/user/safe/showDeleteArticle">文章删除</a></li>
+                <li class="mynavbar"><a href="/safetyExit">安全退出</a></li>
+            </ul>
+            <form class="navbar-form navbar-left mynavbar" action="#" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                        <span class="input-group-btn">
+                                    <button type="submit" class="btn">
+                                        <span class="fui-search"></span>
+                                    </button>
+                                </span>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form action="/uploadFile" method="post" id="file-form" enctype="multipart/form-data">
+                    <span th:text="${message}" style="color: red"></span>
+
+                    <div class="form-group">
+                    <div style="float:left;width:100%">
+                        <input type="text" placeholder="请输入文件名" id="filename">
+                        <input type="text" placeholder="请输入所属科目" id="discpline">
+                        <input id="fname" type="text" tabindex="1" multiple
+                               style="float:left;width:80%;height:40px;border:1px solid #34495E"/>
+                        <!--用于显示上传文件名的input-->
+                        <input id="up_file" name="up_file" type="file" multiple style="display:none"
+                               required="required" onchange="upload_file_name();"/><!--实际起作用的file型input-->
+                        <input type="button" name="submit"
+                               style="float:left;width:10%;height:40px;border:1px solid #34495E;background-color:#34495E;color:#ffffff"
+                               value="浏览" onclick="select_file();"/><!--用于触发file型input浏览按钮的button-->
+
+                        <input id="upload-button" type="submit" name="submit"
+                               style="float:left;width:10%;height:40px;border:1px solid #34495E;background-color:#34495E;color:#ffffff"
+                               value="上传"/>
+
+
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br/>
+        <!--表格，从后端读取，可排序-->
+
+        <span th:if="${fileinfor}">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table class="table">
+                    <tr>
+                        <th>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success " aria-haspopup="true"
+                                        aria-expanded="false">
+                                    文件名
+                                </button>
+                            </div>
+                        </th>
+                        <th style="text-align: right">
+                            <button type="button" class="btn btn-info" >操作</button>
+                        </th>
+                    </tr>
+                    <div th:each="info : ${fileinfor}">
+                    <tr>
+                        <td th:text="${info.filename}"></td>
+                        <td style="text-align: right"><!-- Single button -->
+                            <a href="/user/deleteFile?filename=${filename}" class="btn btn-info" aria-haspopup="true" aria-expanded="false">
+                                删除
+                            </a>
+                        </td>
+                    </tr>
+                    </div>
+
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        </span>
+    </div>
+
+    <script type="text/javascript">
+        function select_file() {
+            document.getElementById("up_file").click();
+        }
+        function upload_file_name() {
+            var fname = document.getElementById("fname");
+            var up_file = document.getElementById("up_file");
+            var fileList = up_file.files;
+            if (fileList.length === 1) {
+                fname.value = "  " + fileList[0].name;
+            } else {
+                fname.value = "  " + "已选择" + fileList.length + "个文件";
+            }
+        }
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/dist/js/flat-ui.min.js"></script>
+
+    <script src="/assets/js/application.js"></script>
+
+    <!--引入jq文件-->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    </body>
+    </html>

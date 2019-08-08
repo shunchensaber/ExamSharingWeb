@@ -1,6 +1,18 @@
+
 spring:
-  profiles:
-    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username:  root
+    password: _tOBHuDry7-v
+    url: jdbc:mysql://127.0.0.1:3306/examsharing?characterEncoding=UTF-8&serverTimezone=UTC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf1:
+    cache: false
+
+
 
 
 

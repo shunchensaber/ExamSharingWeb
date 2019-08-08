@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id  ="myApp">
+    {{message}}
+
+</div>
+<div id="myApp12">
+    <div v-if="seen">啊啊啊</div>
+    <ol>
+        <li v-for="game in games">sfddfa{{game.title}},{{game.price}}</li>
+    </ol>
+
+</div>
+<div id ="myApp2">
+    {{myvar}}
+        <input  v-model="myvar">
+</div>
+<div id = "myApp3">
+    我最喜欢的人是{{girlfriend}}
+    <button v-on:click="changemyfriend('陈乔恩')">陈乔恩</button>
+    <button  v-on:click="changemyfriend('允儿')">允儿</button>
+    <button  v-on:click="changemyfriend('陈妍希')">陈妍希</button>
+
+</div>
+<div id="myApp1">
+    <ol>
+        <gameitem v-for="item in games" v-bind:g="item"></gameitem>
+        哈哈哈
+    </ol>
+
+
+
+
+</div>
+<div id="myApp4">
+  <p>
+      {{message}}
+  </p>
+    <p>
+        {{message|topper}}
+    </p>
+    <p>
+        {{num|topercentage}}
+    </p>
+
+
+</div>
+
+<div id = "myApp5">
+    <p>{{price}},{{priceTax}}{{privezhe}}</p>
+
+</div>
+
+<script>
+    var myapp5 = new Vue({
+        el:"#myApp5",
+        data:{
+            price:5,
+        },
+        computed:
+            {
+                priceTax:function()
+                {
+                    return this.price*1.05;;
+                },
+                privezhe:function()
+                {
+                    return this.price*0.5;
+                }
+            }
+    })
+
+    var myapp4 = new Vue({
+        el:"#myApp4",
+        data:{
+            message:"i love liuyifei",
+            num:"0.3",
+        },
+        filters:{
+            topper:function (value) {
+                return value.toUpperCase();
+                
+            },
+            topercentage:function(value)
+            {
+                return value*100+'%';
+            }
+
+        }
+    });
+    Vue.component('gameitem',
+        {
+            props:['g'],
+            template:'<li>{{g.title}}</li>'
+        });
+    var myapp3 = new Vue({
+        el:"#myApp3",
+            data:{
+            girlfriend:"刘亦菲"
+        },
+        methods:{
+            changemyfriend: function (name) {
+                this.girlfriend = name;
+                
+            }
+        }
+    });
+    var myapp = new Vue(
+    {
+            el:'#myApp',
+                data:{
+                message: "hello"
+    }
+    });
+    var myapp1 = new Vue({
+        el:"#myApp1",
+        data: {
+            seen:true,
+            games:[
+                {title:'勇者斗恶龙',price:400},
+                {title:'超级马里奥',price:380},
+                {title:'我的世界',price:99},
+            ]
+        },
+    });
+    var myapp2 = new Vue({
+        el:"#myApp2",
+        data:{
+            myvar:"变量"
+        }
+    });
+</script>
+
+</body>
+</html>
